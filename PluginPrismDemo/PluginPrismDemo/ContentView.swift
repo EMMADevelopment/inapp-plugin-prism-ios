@@ -10,14 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            Button(action: {}) {
+            Button(action: {
+             //let inAppPlugin = EMMAInAppPluginPrism()
+             //   inAppPlugin.show()
+            }) {
                 Text("Show Prism")
             }
             .padding()
             .foregroundColor(.white)
-            .background(Color.red)
+            .background(Color.init(red: 0, green: 162/255, blue: 99/255))
             .navigationBarTitle("PluginPrismDemo")
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        Color.green
     }
 }
 

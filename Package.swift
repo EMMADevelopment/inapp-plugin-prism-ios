@@ -1,27 +1,23 @@
 // swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
-
-// swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
-    name: "EMMAPluginPrism",
+    name: "EMMAInAppPlugin-Prism",
     platforms: [
        .iOS(.v9)
      ],
     products: [
         .library(
-            name: "EMMAPluginPrism",
-            targets: ["EMMAPluginPrism"]),
+            name: "EMMAInAppPlugin-Prism",
+            targets: ["EMMAInAppPlugin-Prism"]),
     ],
     targets: [
         .target(
-            name: "EMMAPluginPrism",
+            name: "EMMAInAppPlugin-Prism",
             path: "Sources"),
-        //.binaryTarget(
-        //    name: "EMMA_iOS",
-        //    path: "EMMA_iOS.xcframework")
+        /*.binaryTarget(
+            name: "EMMA_iOS",
+            path: "EMMA_iOS.xcframework")*/
     ]
 )
