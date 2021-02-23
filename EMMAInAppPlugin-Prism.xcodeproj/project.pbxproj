@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1103A63A25E3FB8F005A2045 /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; };
+		1103A63B25E3FB8F005A2045 /* EMMA_iOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		116DEB1325E3C6B400F98BC5 /* EMMAPrismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEB1225E3C6B400F98BC5 /* EMMAPrismView.swift */; };
 		11F0A15B25E3D276004E55DA /* EMMAPrismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0A15A25E3D276004E55DA /* EMMAPrismViewController.swift */; };
-		11F0A1C925E3E68A004E55DA /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F0A1C825E3E68A004E55DA /* EMMA_iOS.xcframework */; };
 		OBJ_21 /* EMMAInAppPluginPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* EMMAInAppPluginPrism.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1103A63C25E3FB8F005A2045 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1103A63B25E3FB8F005A2045 /* EMMA_iOS.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
 		116DEB1225E3C6B400F98BC5 /* EMMAPrismView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMAPrismView.swift; sourceTree = "<group>"; };
 		11F0A15A25E3D276004E55DA /* EMMAPrismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMMAPrismViewController.swift; sourceTree = "<group>"; };
-		11F0A1C825E3E68A004E55DA /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
 		"EMMAInAppPlugin-Prism::EMMAInAppPlugin-Prism::Product" /* EMMAInAppPlugin_Prism.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMMAInAppPlugin_Prism.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* PluginPrismDemo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PluginPrismDemo; sourceTree = SOURCE_ROOT; };
 		OBJ_14 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -30,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				11F0A1C925E3E68A004E55DA /* EMMA_iOS.xcframework in Frameworks */,
+				1103A63A25E3FB8F005A2045 /* EMMA_iOS.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +55,7 @@
 		11F0A1C725E3E68A004E55DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11F0A1C825E3E68A004E55DA /* EMMA_iOS.xcframework */,
+				1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,6 +108,7 @@
 			buildPhases = (
 				OBJ_20 /* Sources */,
 				OBJ_22 /* Frameworks */,
+				1103A63C25E3FB8F005A2045 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

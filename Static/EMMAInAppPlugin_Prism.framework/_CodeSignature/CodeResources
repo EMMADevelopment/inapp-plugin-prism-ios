@@ -4,6 +4,22 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/EMMA_iOS.framework/Assets.car</key>
+		<data>
+		VSByncFyvvHZN01NMm4+BKp4zq0=
+		</data>
+		<key>Frameworks/EMMA_iOS.framework/EMMA_iOS</key>
+		<data>
+		m6TZZatMeTsSyDOHHyBAS3p0HTE=
+		</data>
+		<key>Frameworks/EMMA_iOS.framework/Info.plist</key>
+		<data>
+		x+Rjvciwd5mBGOkXEVMXSIe2pY4=
+		</data>
+		<key>Frameworks/EMMA_iOS.framework/_CodeSignature/CodeResources</key>
+		<data>
+		U34v18wZcnnoKqD8Wf0SfvDes+A=
+		</data>
 		<key>Headers/EMMAInAppPlugin_Prism-Swift.h</key>
 		<data>
 		EwBJZI+Vm41p7noEEsjtJeOCcmo=
@@ -14,11 +30,11 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		6Vje/p0dUNO8a9T1vLQcej7OLiM=
+		/fKRzX2ZrW5HwR3TsfQz34AaY8c=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		6Vje/p0dUNO8a9T1vLQcej7OLiM=
+		/fKRzX2ZrW5HwR3TsfQz34AaY8c=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +42,7 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		U4WASqNTnpKxdc6SlUeE46AxXAw=
+		Wljl/uy563XN6hOdZFp3c5HT9Ws=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -34,11 +50,55 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		U4WASqNTnpKxdc6SlUeE46AxXAw=
+		Wljl/uy563XN6hOdZFp3c5HT9Ws=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/EMMA_iOS.framework/Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VSByncFyvvHZN01NMm4+BKp4zq0=
+			</data>
+			<key>hash2</key>
+			<data>
+			TsnR3Ic43KH79Y5OJDUe4GqJDhSU7gqdTskcxCGVp7w=
+			</data>
+		</dict>
+		<key>Frameworks/EMMA_iOS.framework/EMMA_iOS</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			m6TZZatMeTsSyDOHHyBAS3p0HTE=
+			</data>
+			<key>hash2</key>
+			<data>
+			DOF1AloArULYPthdImY1N8Ucplh51yexus/Cxw1Wwf0=
+			</data>
+		</dict>
+		<key>Frameworks/EMMA_iOS.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x+Rjvciwd5mBGOkXEVMXSIe2pY4=
+			</data>
+			<key>hash2</key>
+			<data>
+			KxR/1NYDWwXS50Fx9Anc9J0DJiCjFwX9rExMJdWxBWo=
+			</data>
+		</dict>
+		<key>Frameworks/EMMA_iOS.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			U34v18wZcnnoKqD8Wf0SfvDes+A=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ieof5RXIpC4Bw0cZqBBGwRCoWiNQnlJUYuxLbVo10dY=
+			</data>
+		</dict>
 		<key>Headers/EMMAInAppPlugin_Prism-Swift.h</key>
 		<dict>
 			<key>hash</key>
@@ -54,22 +114,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6Vje/p0dUNO8a9T1vLQcej7OLiM=
+			/fKRzX2ZrW5HwR3TsfQz34AaY8c=
 			</data>
 			<key>hash2</key>
 			<data>
-			LNpWW0oWSPHmFIiMwdIy+p96ydiDbQGWm/OwfkOrs6Y=
+			d8JOGQwttrRuKts2gHtURMWRrmipl/SqMhXietAfaGU=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6Vje/p0dUNO8a9T1vLQcej7OLiM=
+			/fKRzX2ZrW5HwR3TsfQz34AaY8c=
 			</data>
 			<key>hash2</key>
 			<data>
-			LNpWW0oWSPHmFIiMwdIy+p96ydiDbQGWm/OwfkOrs6Y=
+			d8JOGQwttrRuKts2gHtURMWRrmipl/SqMhXietAfaGU=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -87,11 +147,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			U4WASqNTnpKxdc6SlUeE46AxXAw=
+			Wljl/uy563XN6hOdZFp3c5HT9Ws=
 			</data>
 			<key>hash2</key>
 			<data>
-			6xYhQ6vLukdhbyPLAbqCPyacKDOTK5YuymBb3jgMttE=
+			ReEmkd/NtKo8jjAhiGaQzBqEkiKEdCO3pw/mQGutMaY=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftdoc</key>
@@ -109,11 +169,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			U4WASqNTnpKxdc6SlUeE46AxXAw=
+			Wljl/uy563XN6hOdZFp3c5HT9Ws=
 			</data>
 			<key>hash2</key>
 			<data>
-			6xYhQ6vLukdhbyPLAbqCPyacKDOTK5YuymBb3jgMttE=
+			ReEmkd/NtKo8jjAhiGaQzBqEkiKEdCO3pw/mQGutMaY=
 			</data>
 		</dict>
 	</dict>

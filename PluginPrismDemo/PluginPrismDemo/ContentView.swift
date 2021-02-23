@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import EMMA_iOS
 
 struct ContentView: View {
     var body: some View {
         NavigationView {
             Button(action: {
-             //let inAppPlugin = EMMAInAppPluginPrism()
-             //   inAppPlugin.show()
+                let inAppPlugin = EMMAInAppPluginPrism()
+                let nativeAd = EMMANativeAd()
+                inAppPlugin.show(nativeAd)
             }) {
                 Text("Show Prism")
             }
@@ -23,7 +25,6 @@ struct ContentView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        Color.green
     }
 }
 

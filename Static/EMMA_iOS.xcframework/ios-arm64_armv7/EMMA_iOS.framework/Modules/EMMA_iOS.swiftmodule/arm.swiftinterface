@@ -29,7 +29,8 @@ import UIKit
   @objc func show(_ nativeAd: EMMA_iOS.EMMANativeAd)
   @objc func dismiss()
 }
-@_hasMissingDesignatedInitializers @objcMembers open class EMMAInAppPluginImpl {
+@objcMembers open class EMMAInAppPluginImpl {
+  @objc public init()
   @objc public static func sendImpression(campaign: EMMA_iOS.EMMANativeAd)
   @objc public static func sendClick(campaign: EMMA_iOS.EMMANativeAd)
   @objc deinit
