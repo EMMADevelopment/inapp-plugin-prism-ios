@@ -15,7 +15,11 @@ let package = Package(
     targets: [
         .target(
             name: "EMMAInAppPlugin-Prism",
-            path: "Sources"),
+            path: "Sources",
+            resources: [
+                .process("Resources")
+            ]
+        ),
         /*.binaryTarget(
             name: "EMMA_iOS",
             path: "EMMA_iOS.xcframework")*/

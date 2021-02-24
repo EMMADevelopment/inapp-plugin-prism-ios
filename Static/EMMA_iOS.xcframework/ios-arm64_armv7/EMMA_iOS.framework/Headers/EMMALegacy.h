@@ -30,6 +30,9 @@
 /// @name EMMA Initialization
 ///---------------------------------------------------------------------------------------
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnullability-completeness"
+
 /**
 Starts the session with our servers
 
@@ -684,4 +687,7 @@ For a simple configuration put this in you AppDelegate's method:
 
 +(void)addInAppPlugins: (NSArray<EMMAInAppPluginProtocol>* ) plugins;
 
++(nullable UIViewController*) rootViewController;
+
+#pragma clang diagnostic pop
 @end

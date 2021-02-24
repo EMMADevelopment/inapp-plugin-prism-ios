@@ -7,72 +7,56 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
-@objc protocol EMMAPrismViewDelegate: class {
-    
-    @objc optional func cubeViewDidScroll(_ cubeView: EMMAPrismView)
-}
 
 @available(iOS 9.0, *)
 class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
+    private let maxAngle: CGFloat = 60.0
+    private var prismSideViews = [UIView]()
+    private let currentViewIndex = {
+        (scrollView: UIScrollView) -> Int in return Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+    }
     
-    weak var cubeDelegate: EMMAPrismViewDelegate?
-    
-    fileprivate let maxAngle: CGFloat = 60.0
-    
-    fileprivate var prismSideViews = [UIView]()
-    
-    fileprivate lazy var stackView: UIStackView = {
-        
+    private lazy var stackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = NSLayoutConstraint.Axis.horizontal
-        
         return sv
     }()
     
-    open override func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
         configureScrollView()
     }
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         configureScrollView()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    open override func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
     }
     
-    open func addPrismSides(_ views: [UIView]) {
+    func addPrismSides(_ views: [UIView]) {
         for view in views {
             view.layer.masksToBounds = true
             stackView.addArrangedSubview(view)
             
-            addConstraint(NSLayoutConstraint(
-                item: view,
-                attribute: NSLayoutConstraint.Attribute.width,
-                relatedBy: NSLayoutConstraint.Relation.equal,
-                toItem: self,
-                attribute: NSLayoutConstraint.Attribute.width,
-                multiplier: 1,
-                constant: 0)
-            )
+            addConstraint(view.widthAnchor.constraint(equalTo: widthAnchor))
             
             prismSideViews.append(view)
         }
     }
     
-    open func addPrismSide(_ view: UIView) {
+    func addPrismSide(_ view: UIView) {
         addPrismSides([view])
     }
     
-    open func scrollToViewAtIndex(_ index: Int, animated: Bool) {
+    func scrollToViewAtIndex(_ index: Int, animated: Bool) {
         if index > -1 && index < prismSideViews.count {
             
             let width = self.frame.size.width
@@ -83,93 +67,56 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    // MARK: Scroll view delegate
-    
-    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        transformViewsInScrollView(scrollView)
-        cubeDelegate?.cubeViewDidScroll?(self)
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let currentPage = currentViewIndex(scrollView)
+        if currentPage == 0 {
+            contentOffset = CGPoint(x: scrollView.frame.size.width * CGFloat(prismSideViews.count - 2), y: scrollView.contentOffset.y)
+        } else if currentPage == prismSideViews.count - 1 {
+            contentOffset = CGPoint(x: scrollView.frame.size.width, y: 0)
+        }
     }
     
-    // MARK: Private methods
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (!isHidden) {
+            transformViewsInScrollView(scrollView)
+        }
+    }
     
-    fileprivate func configureScrollView() {
-        
-        // Configure scroll view properties
-        
+    private func configureScrollView() {
+        isHidden = true
         backgroundColor = UIColor.white
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
         isPagingEnabled = true
-        bounces = true
+        bounces = false
         delegate = self
-        
-        // Add layout constraints
         
         addSubview(stackView)
         
-        addConstraint(NSLayoutConstraint(
-            item: stackView,
-            attribute: NSLayoutConstraint.Attribute.leading,
-            relatedBy: NSLayoutConstraint.Relation.equal,
-            toItem: self,
-            attribute: NSLayoutConstraint.Attribute.leading,
-            multiplier: 1,
-            constant: 0)
-        )
+        let constraints = [
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.heightAnchor.constraint(equalTo: heightAnchor),
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
+            bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
+        ]
         
-        addConstraint(NSLayoutConstraint(
-            item: stackView,
-            attribute: NSLayoutConstraint.Attribute.top,
-            relatedBy: NSLayoutConstraint.Relation.equal,
-            toItem: self,
-            attribute: NSLayoutConstraint.Attribute.top,
-            multiplier: 1,
-            constant: 0)
-        )
-        
-        addConstraint(NSLayoutConstraint(
-            item: stackView,
-            attribute: NSLayoutConstraint.Attribute.height,
-            relatedBy: NSLayoutConstraint.Relation.equal,
-            toItem: self,
-            attribute: NSLayoutConstraint.Attribute.height,
-            multiplier: 1,
-            constant: 0)
-        )
-        
-        addConstraint(NSLayoutConstraint(
-            item: stackView,
-            attribute: NSLayoutConstraint.Attribute.centerY,
-            relatedBy: NSLayoutConstraint.Relation.equal,
-            toItem: self,
-            attribute: NSLayoutConstraint.Attribute.centerY,
-            multiplier: 1,
-            constant: 0)
-        )
-        
-        addConstraint(NSLayoutConstraint(
-            item: self,
-            attribute: NSLayoutConstraint.Attribute.trailing,
-            relatedBy: NSLayoutConstraint.Relation.equal,
-            toItem: stackView,
-            attribute: NSLayoutConstraint.Attribute.trailing,
-            multiplier: 1,
-            constant: 0)
-        )
-        
-        addConstraint(NSLayoutConstraint(
-            item: self,
-            attribute: NSLayoutConstraint.Attribute.bottom,
-            relatedBy: NSLayoutConstraint.Relation.equal,
-            toItem: stackView,
-            attribute: NSLayoutConstraint.Attribute.bottom,
-            multiplier: 1,
-            constant: 0)
-        )
+        NSLayoutConstraint.activate(constraints)
     }
     
-    fileprivate func transformViewsInScrollView(_ scrollView: UIScrollView) {
-        
+    /*@objc func didReceiveTap(sender: UITapGestureRecognizer) {
+        let currentOffsetX = contentOffset.x
+        let nextRect = CGRect(x: currentOffsetX + frame.width,
+                              y: 0,
+                              width: frame.width,
+                              height: frame.height)
+
+        scrollRectToVisible(nextRect, animated: true)
+    }*/
+    
+    private func transformViewsInScrollView(_ scrollView: UIScrollView) {
+
         let xOffset = scrollView.contentOffset.x
         let svWidth = scrollView.frame.width
         var deg = maxAngle / bounds.size.width * xOffset
@@ -189,33 +136,10 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
             
             let x = xOffset / svWidth > CGFloat(index) ? 1.0 : 0.0
             setAnchorPoint(CGPoint(x: x, y: 0.5), forView: view)
-            
-            //applyShadowForView(view, index: index)
         }
     }
     
-    /*fileprivate func applyShadowForView(_ view: UIView, index: Int) {
-        
-        let w = self.frame.size.width
-        let h = self.frame.size.height
-        
-        let r1 = frameFor(origin: contentOffset, size: self.frame.size)
-        let r2 = frameFor(origin: CGPoint(x: CGFloat(index)*w, y: 0),
-                          size: CGSize(width: w, height: h))
-        
-        // Only show shadow on right-hand side
-        if r1.origin.x <= r2.origin.x {
-            
-            let intersection = r1.intersection(r2)
-            let intArea = intersection.size.width*intersection.size.height
-            let union = r1.union(r2)
-            let unionArea = union.size.width*union.size.height
-            
-            view.layer.opacity = Float(intArea / unionArea)
-        }
-    }*/
-    
-    fileprivate func setAnchorPoint(_ anchorPoint: CGPoint, forView view: UIView) {
+    private func setAnchorPoint(_ anchorPoint: CGPoint, forView view: UIView) {
         
         var newPoint = CGPoint(x: view.bounds.size.width * anchorPoint.x, y: view.bounds.size.height * anchorPoint.y)
         var oldPoint = CGPoint(x: view.bounds.size.width * view.layer.anchorPoint.x, y: view.bounds.size.height * view.layer.anchorPoint.y)
@@ -232,9 +156,5 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
         
         view.layer.position = position
         view.layer.anchorPoint = anchorPoint
-    }
-    
-    fileprivate func frameFor(origin: CGPoint, size: CGSize) -> CGRect {
-        return CGRect(x: origin.x, y: origin.y, width: size.width, height: size.height)
     }
 }

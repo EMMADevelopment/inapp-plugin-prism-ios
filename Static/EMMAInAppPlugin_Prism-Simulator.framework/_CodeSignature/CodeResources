@@ -10,7 +10,7 @@
 		</data>
 		<key>Frameworks/EMMA_iOS.framework/EMMA_iOS</key>
 		<data>
-		m6TZZatMeTsSyDOHHyBAS3p0HTE=
+		zouXCY1w2Iq9rm6W58LHNzjH0xI=
 		</data>
 		<key>Frameworks/EMMA_iOS.framework/Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Frameworks/EMMA_iOS.framework/_CodeSignature/CodeResources</key>
 		<data>
-		U34v18wZcnnoKqD8Wf0SfvDes+A=
+		HV4CWFrF1Y2SoSXTu61qDS7EM2w=
 		</data>
 		<key>Headers/EMMAInAppPlugin_Prism-Swift.h</key>
 		<data>
@@ -26,15 +26,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		F9gPo63vLZvRx83W29qr5933hII=
+		X2WWXeEZkxS9V9LCNoUVn0QKyGg=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		/fKRzX2ZrW5HwR3TsfQz34AaY8c=
+		dRk5UcH0Dk3dX+m+h3emB2u/+Ys=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		/fKRzX2ZrW5HwR3TsfQz34AaY8c=
+		dRk5UcH0Dk3dX+m+h3emB2u/+Ys=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Wljl/uy563XN6hOdZFp3c5HT9Ws=
+		H6Mx8BTpyVgq10YtHUOVu8H//OQ=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		Wljl/uy563XN6hOdZFp3c5HT9Ws=
+		H6Mx8BTpyVgq10YtHUOVu8H//OQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -70,11 +70,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			m6TZZatMeTsSyDOHHyBAS3p0HTE=
+			zouXCY1w2Iq9rm6W58LHNzjH0xI=
 			</data>
 			<key>hash2</key>
 			<data>
-			DOF1AloArULYPthdImY1N8Ucplh51yexus/Cxw1Wwf0=
+			ARiFaSZbosqGGxLvL7LcBLGT3hTdPcYYpksGuvAkLbg=
 			</data>
 		</dict>
 		<key>Frameworks/EMMA_iOS.framework/Info.plist</key>
@@ -92,11 +92,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			U34v18wZcnnoKqD8Wf0SfvDes+A=
+			HV4CWFrF1Y2SoSXTu61qDS7EM2w=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ieof5RXIpC4Bw0cZqBBGwRCoWiNQnlJUYuxLbVo10dY=
+			B45lUyU8tIoJXtgUqxaG544sKoN9cAm8vjtLD7Ivhr0=
 			</data>
 		</dict>
 		<key>Headers/EMMAInAppPlugin_Prism-Swift.h</key>
@@ -114,22 +114,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/fKRzX2ZrW5HwR3TsfQz34AaY8c=
+			dRk5UcH0Dk3dX+m+h3emB2u/+Ys=
 			</data>
 			<key>hash2</key>
 			<data>
-			d8JOGQwttrRuKts2gHtURMWRrmipl/SqMhXietAfaGU=
+			RrKxoV+y3nYOPs2kpJRxBbkAtTMa2GJzt/IpgTVXqh4=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/fKRzX2ZrW5HwR3TsfQz34AaY8c=
+			dRk5UcH0Dk3dX+m+h3emB2u/+Ys=
 			</data>
 			<key>hash2</key>
 			<data>
-			d8JOGQwttrRuKts2gHtURMWRrmipl/SqMhXietAfaGU=
+			RrKxoV+y3nYOPs2kpJRxBbkAtTMa2GJzt/IpgTVXqh4=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -147,11 +147,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Wljl/uy563XN6hOdZFp3c5HT9Ws=
+			H6Mx8BTpyVgq10YtHUOVu8H//OQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ReEmkd/NtKo8jjAhiGaQzBqEkiKEdCO3pw/mQGutMaY=
+			3iDvItLWXAFqaMNhomijyrAkv3UomxXlbyyiI1RIRsY=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftdoc</key>
@@ -169,11 +169,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Wljl/uy563XN6hOdZFp3c5HT9Ws=
+			H6Mx8BTpyVgq10YtHUOVu8H//OQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ReEmkd/NtKo8jjAhiGaQzBqEkiKEdCO3pw/mQGutMaY=
+			3iDvItLWXAFqaMNhomijyrAkv3UomxXlbyyiI1RIRsY=
 			</data>
 		</dict>
 	</dict>

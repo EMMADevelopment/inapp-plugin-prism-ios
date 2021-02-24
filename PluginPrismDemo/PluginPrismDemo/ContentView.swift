@@ -7,6 +7,7 @@
 
 import SwiftUI
 import EMMA_iOS
+import EMMAInAppPlugin_Prism
 
 struct ContentView: View {
     var body: some View {

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class EMMAPrismViewController: UIViewController {
+    var prism: EMMAPrism? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,6 @@ class EMMAPrismViewController: UIViewController {
         if let imageUrl = URL(string: url) {
             URLSession.shared.dataTask(with: imageUrl, completionHandler: { data, response, error in
                 guard let data = data, error == nil else {
-                    
                     return
                 }
                 self.addImage(data: data, toView: view)
@@ -53,44 +53,38 @@ class EMMAPrismViewController: UIViewController {
         }
     }
     
-    func preparePrismSideView1() -> UIView {
+    func preparePrismSideView(side: EMMAPrismSide) -> UIView {
         let sideView = UIView()
-        sideView.backgroundColor = .black
-        let imageUrl = "https://loremflickr.com/cache/resized/65535_50548788002_44d63fb407_b_320_700_nofilter.jpg"
-        downloadImageContent(view: sideView, url: imageUrl)
-        return sideView
-    }
-    
-    func preparePrismSideView2() -> UIView {
-        let sideView = UIView()
-        sideView.backgroundColor = .white
-        let imageUrl = "https://loremflickr.com/cache/resized/65535_50488056162_04ebb8bd48_b_320_700_nofilter.jpg"
-        downloadImageContent(view: sideView, url: imageUrl)
+        downloadImageContent(view: sideView, url: side.image)
         return sideView
     }
     
     func preparePrismView() {
-        let prismView = EMMAPrismView()
-        //let prismView = UIView()
-        let sides = [preparePrismSideView1(), preparePrismSideView2()]
-        prismView.addPrismSides(sides)
-        view.addSubview(prismView)
-        prismView.translatesAutoresizingMaskIntoConstraints = false
+        if let prism = prism {
+            let prismView = EMMAPrismView()
+            
+            var sidesViews = [UIView]()
+            prism.sides.forEach { (side: EMMAPrismSide) in
+                sidesViews.append(preparePrismSideView(side: side))
+            }
+            
+            prismView.addPrismSides(sidesViews)
+            view.addSubview(prismView)
+            prismView.translatesAutoresizingMaskIntoConstraints = false
+            
+            let constraints = [
+                prismView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                prismView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                prismView.widthAnchor.constraint(equalToConstant: view.bounds.width * 0.7),
+                prismView.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.6),
+            ]
         
-        let constraints = [
-            prismView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            prismView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            prismView.widthAnchor.constraint(equalToConstant: 250.0),
-            prismView.heightAnchor.constraint(equalToConstant: 400.0),
-        ]
-        
-        NSLayoutConstraint.activate(constraints)
-        
-        /*NSLayoutConstraint(item: prismView, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: prismView, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: prismView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250).isActive = true
-        NSLayoutConstraint(item: prismView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 400).isActive = true*/
-
+            NSLayoutConstraint.activate(constraints)
+            
+            prismView.layoutIfNeeded()
+            
+            prismView.contentOffset = CGPoint(x:prismView.bounds.width, y:0)
+            prismView.isHidden = false
+        }
     }
-    
 }

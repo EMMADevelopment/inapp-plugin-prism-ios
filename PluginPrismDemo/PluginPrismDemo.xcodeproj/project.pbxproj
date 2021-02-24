@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1103A64225E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A64125E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework */; };
-		1103A64325E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A64125E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1103A64925E3FF90005A2045 /* EMMAPrismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103A64625E3FF90005A2045 /* EMMAPrismViewController.swift */; };
-		1103A64A25E3FF90005A2045 /* EMMAPrismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103A64725E3FF90005A2045 /* EMMAPrismView.swift */; };
-		1103A64B25E3FF90005A2045 /* EMMAInAppPluginPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103A64825E3FF90005A2045 /* EMMAInAppPluginPrism.swift */; };
 		1106925B25E18AF60012F496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106925A25E18AF60012F496 /* AppDelegate.swift */; };
 		110ED45C25E01B870010881E /* PluginPrismDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ED45B25E01B870010881E /* PluginPrismDemoApp.swift */; };
 		110ED45E25E01B880010881E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ED45D25E01B880010881E /* ContentView.swift */; };
@@ -19,8 +14,10 @@
 		110ED46325E01B880010881E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110ED46225E01B880010881E /* Preview Assets.xcassets */; };
 		110ED46E25E01B880010881E /* PluginPrismDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ED46D25E01B880010881E /* PluginPrismDemoTests.swift */; };
 		110ED47925E01B880010881E /* PluginPrismDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ED47825E01B880010881E /* PluginPrismDemoUITests.swift */; };
-		11F0A1D725E3EC91004E55DA /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */; };
-		11F0A1D825E3EC91004E55DA /* EMMA_iOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		115393A425E6745800BB4C89 /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */; };
+		115393A525E6745800BB4C89 /* EMMA_iOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11B1D11825E6AC3100AB79A5 /* EMMAInAppPlugin_Prism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113B028A25E6902E001EC809 /* EMMAInAppPlugin_Prism.framework */; };
+		11B1D11925E6AC3100AB79A5 /* EMMAInAppPlugin_Prism.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 113B028A25E6902E001EC809 /* EMMAInAppPlugin_Prism.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +35,13 @@
 			remoteGlobalIDString = 110ED45725E01B870010881E;
 			remoteInfo = PluginPrismDemo;
 		};
+		113B028925E6902E001EC809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1153940925E68F5200BB4C89 /* EMMAInAppPlugin-Prism.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "EMMAInAppPlugin-Prism::EMMAInAppPlugin-Prism::Product";
+			remoteInfo = "EMMAInAppPlugin-Prism";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,8 +51,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1103A64325E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework in Embed Frameworks */,
-				11F0A1D825E3EC91004E55DA /* EMMA_iOS.xcframework in Embed Frameworks */,
+				11B1D11925E6AC3100AB79A5 /* EMMAInAppPlugin_Prism.framework in Embed Frameworks */,
+				115393A525E6745800BB4C89 /* EMMA_iOS.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,10 +60,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1103A64125E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMMAInAppPlugin_Prism.framework; path = ../Static/EMMAInAppPlugin_Prism.framework; sourceTree = "<group>"; };
-		1103A64625E3FF90005A2045 /* EMMAPrismViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMAPrismViewController.swift; sourceTree = "<group>"; };
-		1103A64725E3FF90005A2045 /* EMMAPrismView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMAPrismView.swift; sourceTree = "<group>"; };
-		1103A64825E3FF90005A2045 /* EMMAInAppPluginPrism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMAInAppPluginPrism.swift; sourceTree = "<group>"; };
 		1106925A25E18AF60012F496 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		110ED45825E01B870010881E /* PluginPrismDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PluginPrismDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		110ED45B25E01B870010881E /* PluginPrismDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginPrismDemoApp.swift; sourceTree = "<group>"; };
@@ -73,6 +73,9 @@
 		110ED47425E01B880010881E /* PluginPrismDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginPrismDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		110ED47825E01B880010881E /* PluginPrismDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginPrismDemoUITests.swift; sourceTree = "<group>"; };
 		110ED47A25E01B880010881E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1153940925E68F5200BB4C89 /* EMMAInAppPlugin-Prism.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "EMMAInAppPlugin-Prism.xcodeproj"; path = "../EMMAInAppPlugin-Prism.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		11CA872625E6A2CB0027155A /* EMMAInAppPlugin_Prism-Simulator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "EMMAInAppPlugin_Prism-Simulator.framework"; path = "../Static/EMMAInAppPlugin_Prism-Simulator.framework"; sourceTree = "<group>"; };
+		11CA873F25E6A5060027155A /* EMMAInAppPlugin_Prism-Simulator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "EMMAInAppPlugin_Prism-Simulator.framework"; path = "../EMMAInAppPlugin_Prism-Simulator.framework"; sourceTree = "<group>"; };
 		11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = ../Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1103A64225E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework in Frameworks */,
-				11F0A1D725E3EC91004E55DA /* EMMA_iOS.xcframework in Frameworks */,
+				11B1D11825E6AC3100AB79A5 /* EMMAInAppPlugin_Prism.framework in Frameworks */,
+				115393A425E6745800BB4C89 /* EMMA_iOS.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +109,8 @@
 		1106924F25E18A440012F496 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1103A64125E3FE1D005A2045 /* EMMAInAppPlugin_Prism.framework */,
+				11CA872625E6A2CB0027155A /* EMMAInAppPlugin_Prism-Simulator.framework */,
+				11CA873F25E6A5060027155A /* EMMAInAppPlugin_Prism-Simulator.framework */,
 				11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */,
 			);
 			name = Frameworks;
@@ -115,6 +119,7 @@
 		110ED44F25E01B870010881E = {
 			isa = PBXGroup;
 			children = (
+				1153940925E68F5200BB4C89 /* EMMAInAppPlugin-Prism.xcodeproj */,
 				110ED45A25E01B870010881E /* PluginPrismDemo */,
 				110ED46C25E01B880010881E /* PluginPrismDemoTests */,
 				110ED47725E01B880010881E /* PluginPrismDemoUITests */,
@@ -136,9 +141,6 @@
 		110ED45A25E01B870010881E /* PluginPrismDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1103A64825E3FF90005A2045 /* EMMAInAppPluginPrism.swift */,
-				1103A64725E3FF90005A2045 /* EMMAPrismView.swift */,
-				1103A64625E3FF90005A2045 /* EMMAPrismViewController.swift */,
 				1106925A25E18AF60012F496 /* AppDelegate.swift */,
 				110ED45B25E01B870010881E /* PluginPrismDemoApp.swift */,
 				110ED45D25E01B880010881E /* ContentView.swift */,
@@ -173,6 +175,14 @@
 				110ED47A25E01B880010881E /* Info.plist */,
 			);
 			path = PluginPrismDemoUITests;
+			sourceTree = "<group>";
+		};
+		113B028425E6902E001EC809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				113B028A25E6902E001EC809 /* EMMAInAppPlugin_Prism.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +275,12 @@
 			mainGroup = 110ED44F25E01B870010881E;
 			productRefGroup = 110ED45925E01B870010881E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 113B028425E6902E001EC809 /* Products */;
+					ProjectRef = 1153940925E68F5200BB4C89 /* EMMAInAppPlugin-Prism.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				110ED45725E01B870010881E /* PluginPrismDemo */,
@@ -273,6 +289,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		113B028A25E6902E001EC809 /* EMMAInAppPlugin_Prism.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EMMAInAppPlugin_Prism.framework;
+			remoteRef = 113B028925E6902E001EC809 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		110ED45625E01B870010881E /* Resources */ = {
@@ -306,10 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1106925B25E18AF60012F496 /* AppDelegate.swift in Sources */,
-				1103A64B25E3FF90005A2045 /* EMMAInAppPluginPrism.swift in Sources */,
-				1103A64A25E3FF90005A2045 /* EMMAPrismView.swift in Sources */,
 				110ED45E25E01B880010881E /* ContentView.swift in Sources */,
-				1103A64925E3FF90005A2045 /* EMMAPrismViewController.swift in Sources */,
 				110ED45C25E01B870010881E /* PluginPrismDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +406,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "${BUILT_PRODUCTS_DIR}/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -444,6 +468,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "${BUILT_PRODUCTS_DIR}/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -471,10 +496,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PluginPrismDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = V9SQWVREY8;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../Static",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PluginPrismDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -497,10 +519,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PluginPrismDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = V9SQWVREY8;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../Static",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PluginPrismDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

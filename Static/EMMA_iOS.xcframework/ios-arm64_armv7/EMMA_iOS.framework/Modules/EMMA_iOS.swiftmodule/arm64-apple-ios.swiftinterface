@@ -30,9 +30,9 @@ import UIKit
   @objc func dismiss()
 }
 @objcMembers open class EMMAInAppPluginImpl {
-  @objc public init()
   @objc public static func sendImpression(campaign: EMMA_iOS.EMMANativeAd)
   @objc public static func sendClick(campaign: EMMA_iOS.EMMANativeAd)
+  @objc public init()
   @objc deinit
 }
 public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAInAppPluginProtocol
@@ -120,6 +120,7 @@ public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAI
   public static func syncWithWebSDK()
   public static func setWebSDKDomain(domain: Swift.String)
   public static func addInAppPlugins(_ plugins: [EMMA_iOS.EMMAInAppPluginProtocol])
+  public static func rootViewController() -> UIKit.UIViewController?
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class EMMAInAppPluginController : ObjectiveC.NSObject {

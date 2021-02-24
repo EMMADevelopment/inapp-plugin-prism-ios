@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1103A63A25E3FB8F005A2045 /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; };
+		1103A63A25E3FB8F005A2045 /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1103A63B25E3FB8F005A2045 /* EMMA_iOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		116DEB1325E3C6B400F98BC5 /* EMMAPrismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEB1225E3C6B400F98BC5 /* EMMAPrismView.swift */; };
+		11CA870125E6965C0027155A /* EMMAPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA86FF25E6965C0027155A /* EMMAPrism.swift */; };
+		11CA870225E6965C0027155A /* EMMAPrismSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA870025E6965C0027155A /* EMMAPrismSide.swift */; };
 		11F0A15B25E3D276004E55DA /* EMMAPrismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0A15A25E3D276004E55DA /* EMMAPrismViewController.swift */; };
 		OBJ_21 /* EMMAInAppPluginPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* EMMAInAppPluginPrism.swift */; };
 /* End PBXBuildFile section */
@@ -31,9 +33,11 @@
 /* Begin PBXFileReference section */
 		1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
 		116DEB1225E3C6B400F98BC5 /* EMMAPrismView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMAPrismView.swift; sourceTree = "<group>"; };
+		11B1D11D25E6BC5100AB79A5 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		11CA86FF25E6965C0027155A /* EMMAPrism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMAPrism.swift; sourceTree = "<group>"; };
+		11CA870025E6965C0027155A /* EMMAPrismSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMAPrismSide.swift; sourceTree = "<group>"; };
 		11F0A15A25E3D276004E55DA /* EMMAPrismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMMAPrismViewController.swift; sourceTree = "<group>"; };
 		"EMMAInAppPlugin-Prism::EMMAInAppPlugin-Prism::Product" /* EMMAInAppPlugin_Prism.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMMAInAppPlugin_Prism.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* PluginPrismDemo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PluginPrismDemo; sourceTree = SOURCE_ROOT; };
 		OBJ_14 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_15 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -52,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11B1D11C25E6BC3100AB79A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11B1D11D25E6BC5100AB79A5 /* Media.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		11F0A1C725E3E68A004E55DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				11B1D11C25E6BC3100AB79A5 /* Resources */,
 				OBJ_7 /* Sources */,
 				OBJ_9 /* Tests */,
 				OBJ_10 /* Products */,
-				OBJ_12 /* PluginPrismDemo */,
 				OBJ_14 /* LICENSE */,
 				OBJ_15 /* README.md */,
 				11F0A1C725E3E68A004E55DA /* Frameworks */,
@@ -85,6 +97,8 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				11CA86FF25E6965C0027155A /* EMMAPrism.swift */,
+				11CA870025E6965C0027155A /* EMMAPrismSide.swift */,
 				116DEB1225E3C6B400F98BC5 /* EMMAPrismView.swift */,
 				OBJ_8 /* EMMAInAppPluginPrism.swift */,
 				11F0A15A25E3D276004E55DA /* EMMAPrismViewController.swift */,
@@ -151,7 +165,9 @@
 			buildActionMask = 0;
 			files = (
 				11F0A15B25E3D276004E55DA /* EMMAPrismViewController.swift in Sources */,
+				11CA870125E6965C0027155A /* EMMAPrism.swift in Sources */,
 				116DEB1325E3C6B400F98BC5 /* EMMAPrismView.swift in Sources */,
+				11CA870225E6965C0027155A /* EMMAPrismSide.swift in Sources */,
 				OBJ_21 /* EMMAInAppPluginPrism.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,8 +181,9 @@
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"${PROJECT_DIR}/Static",
+					"${BUILT_PRODUCTS_DIR}/**",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "EMMAInAppPlugin-Prism.xcodeproj/EMMAInAppPlugin_Prism_Info.plist";
@@ -188,6 +205,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				SYMROOT = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = "EMMAInAppPlugin-Prism";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -201,8 +219,9 @@
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"${PROJECT_DIR}/Static",
+					"${BUILT_PRODUCTS_DIR}/**",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "EMMAInAppPlugin-Prism.xcodeproj/EMMAInAppPlugin_Prism_Info.plist";
@@ -224,6 +243,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				SYMROOT = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = "EMMAInAppPlugin-Prism";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
