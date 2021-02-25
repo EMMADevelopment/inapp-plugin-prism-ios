@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1103A63A25E3FB8F005A2045 /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1103A63B25E3FB8F005A2045 /* EMMA_iOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11147AC525E7204F007479F1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B1D11D25E6BC5100AB79A5 /* Media.xcassets */; };
 		116DEB1325E3C6B400F98BC5 /* EMMAPrismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEB1225E3C6B400F98BC5 /* EMMAPrismView.swift */; };
 		11CA870125E6965C0027155A /* EMMAPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA86FF25E6965C0027155A /* EMMAPrism.swift */; };
 		11CA870225E6965C0027155A /* EMMAPrismSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA870025E6965C0027155A /* EMMAPrismSide.swift */; };
@@ -123,6 +124,7 @@
 				OBJ_20 /* Sources */,
 				OBJ_22 /* Frameworks */,
 				1103A63C25E3FB8F005A2045 /* Embed Frameworks */,
+				11147AC425E72048007479F1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +160,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11147AC425E72048007479F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11147AC525E7204F007479F1 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_20 /* Sources */ = {

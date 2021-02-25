@@ -8,14 +8,16 @@
 import UIKit
 
 
+enum PrismDirection {
+    case right, left
+}
+
 @available(iOS 9.0, *)
 class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
     private let maxAngle: CGFloat = 60.0
     private var prismSideViews = [UIView]()
-    private let currentViewIndex = {
-        (scrollView: UIScrollView) -> Int in return Int(scrollView.contentOffset.x / scrollView.frame.size.width)
-    }
-    
+    private var manualScroll = false
+   
     private lazy var stackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
@@ -56,24 +58,41 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
         addPrismSides([view])
     }
     
-    func scrollToViewAtIndex(_ index: Int, animated: Bool) {
-        if index > -1 && index < prismSideViews.count {
-            
-            let width = self.frame.size.width
-            let height = self.frame.size.height
-            
-            let frame = CGRect(x: CGFloat(index)*width, y: 0, width: width, height: height)
-            scrollRectToVisible(frame, animated: animated)
+    func scrollToView(_ currentIndex: Int, direction: PrismDirection) {
+        let width = self.frame.size.width
+        let height = self.frame.size.height
+        
+        if (currentIndex == 0 && direction == .left) {
+            contentOffset = CGPoint(x: width * CGFloat(prismSideViews.count - 2), y: contentOffset.y)
+            let frame = CGRect(x: width * CGFloat(prismSideViews.count - 3), y: 0, width: width, height: height)
+            scrollRectToVisible(frame ,animated: true)
+        } else if (currentIndex == prismSideViews.count - 1 && direction == .right) {
+            contentOffset = CGPoint(x: width, y: contentOffset.y)
+            let frame = CGRect(x: width*2, y: 0, width: width, height: height)
+            scrollRectToVisible(frame ,animated: true)
+        } else if (direction == .left) {
+            contentOffset = CGPoint(x: width * CGFloat(currentIndex), y: contentOffset.y)
+            let frame = CGRect(x: (width * CGFloat(currentIndex)) - width, y: 0, width: width, height: height)
+            scrollRectToVisible(frame ,animated: true)
+        } else {
+            contentOffset = CGPoint(x: width * CGFloat(currentIndex), y: contentOffset.y)
+            let frame = CGRect(x: (width * CGFloat(currentIndex)) + width, y: 0, width: width, height: height)
+            scrollRectToVisible(frame ,animated: true)
         }
     }
     
+    func currentScrollViewIndex(_ scrollView: UIScrollView) -> Int {
+        return Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+    }
+
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let currentPage = currentViewIndex(scrollView)
-        if currentPage == 0 {
-            contentOffset = CGPoint(x: scrollView.frame.size.width * CGFloat(prismSideViews.count - 2), y: scrollView.contentOffset.y)
-        } else if currentPage == prismSideViews.count - 1 {
-            contentOffset = CGPoint(x: scrollView.frame.size.width, y: 0)
-        }
+            let currentPage = currentScrollViewIndex(scrollView)
+            print(currentPage)
+            if currentPage == 0 {
+                contentOffset = CGPoint(x: scrollView.frame.size.width * CGFloat(prismSideViews.count - 2), y: scrollView.contentOffset.y)
+            } else if currentPage == prismSideViews.count - 1 {
+                contentOffset = CGPoint(x: scrollView.frame.size.width, y: 0)
+            }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -81,7 +100,7 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
             transformViewsInScrollView(scrollView)
         }
     }
-    
+        
     private func configureScrollView() {
         isHidden = true
         backgroundColor = UIColor.white
@@ -105,20 +124,10 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
         NSLayoutConstraint.activate(constraints)
     }
     
-    /*@objc func didReceiveTap(sender: UITapGestureRecognizer) {
-        let currentOffsetX = contentOffset.x
-        let nextRect = CGRect(x: currentOffsetX + frame.width,
-                              y: 0,
-                              width: frame.width,
-                              height: frame.height)
-
-        scrollRectToVisible(nextRect, animated: true)
-    }*/
-    
     private func transformViewsInScrollView(_ scrollView: UIScrollView) {
-
         let xOffset = scrollView.contentOffset.x
         let svWidth = scrollView.frame.width
+        
         var deg = maxAngle / bounds.size.width * xOffset
         
         for index in 0 ..< prismSideViews.count {
@@ -126,6 +135,7 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
             let view = prismSideViews[index]
             
             deg = index == 0 ? deg : deg - maxAngle
+            
             let rad = deg * CGFloat(Double.pi / 180)
             
             var transform = CATransform3DIdentity
@@ -140,7 +150,6 @@ class EMMAPrismView: UIScrollView, UIScrollViewDelegate {
     }
     
     private func setAnchorPoint(_ anchorPoint: CGPoint, forView view: UIView) {
-        
         var newPoint = CGPoint(x: view.bounds.size.width * anchorPoint.x, y: view.bounds.size.height * anchorPoint.y)
         var oldPoint = CGPoint(x: view.bounds.size.width * view.layer.anchorPoint.x, y: view.bounds.size.height * view.layer.anchorPoint.y)
         

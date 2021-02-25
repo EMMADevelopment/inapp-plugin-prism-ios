@@ -26,10 +26,10 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
     }
     
     func getFakeData() -> EMMAPrism {
-        let prismSide1 = EMMAPrismSide(image: "https://loremflickr.com/cache/resized/65535_50434591271_10520e206b_h_370_750_nofilter.jpg",
+        let prismSide1 = EMMAPrismSide(image: "https://i.picsum.photos/id/586/300/700.jpg?hmac=TKBELClTbUvaXq5NHUpCVnnhssZ3tYTSLTYBi6rPo5Q",
                                        cta: "https://google.es")
         
-        let prismSide2 = EMMAPrismSide(image: "https://loremflickr.com/cache/resized/65535_50733652111_b6055aa84c_c_370_750_nofilter.jpg",
+        let prismSide2 = EMMAPrismSide(image: "https://i.picsum.photos/id/666/300/700.jpg?hmac=mXEaSU1_1gEAtK3z-beAT7GyWGt8oYsa34QOXLBx-qY",
                                        cta: "https://emma.io")
         
         return EMMAPrism(campaignId: 123456, openInApp: true, canClose: true, sides:[prismSide1, prismSide2])
@@ -43,7 +43,6 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
         return EMMAPrismSide(image: image, cta: cta)
     }
 
-    
     func convertNativeAdToPrism(_ nativeAd: EMMANativeAd) -> EMMAPrism{
         if(fakeData) {
             return getFakeData()

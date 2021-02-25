@@ -75,7 +75,6 @@
 		110ED47A25E01B880010881E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1153940925E68F5200BB4C89 /* EMMAInAppPlugin-Prism.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "EMMAInAppPlugin-Prism.xcodeproj"; path = "../EMMAInAppPlugin-Prism.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		11CA872625E6A2CB0027155A /* EMMAInAppPlugin_Prism-Simulator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "EMMAInAppPlugin_Prism-Simulator.framework"; path = "../Static/EMMAInAppPlugin_Prism-Simulator.framework"; sourceTree = "<group>"; };
-		11CA873F25E6A5060027155A /* EMMAInAppPlugin_Prism-Simulator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "EMMAInAppPlugin_Prism-Simulator.framework"; path = "../EMMAInAppPlugin_Prism-Simulator.framework"; sourceTree = "<group>"; };
 		11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = ../Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				11CA872625E6A2CB0027155A /* EMMAInAppPlugin_Prism-Simulator.framework */,
-				11CA873F25E6A5060027155A /* EMMAInAppPlugin_Prism-Simulator.framework */,
 				11F0A1D525E3EC91004E55DA /* EMMA_iOS.xcframework */,
 			);
 			name = Frameworks;
