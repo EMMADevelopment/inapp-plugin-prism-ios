@@ -17,6 +17,10 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
             if let rootViewController = EMMA.rootViewController() {
                 let prism = self.convertNativeAdToPrism(nativeAd)
                 let prismViewController = EMMAPrismViewController()
+                
+                if #available(iOS 13.0, *) {
+                    prismViewController.isModalInPresentation = true;
+                }
                 prismViewController.prism = prism
                 prismViewController.modalPresentationStyle = .overFullScreen
                 prismViewController.view.bounds = rootViewController.view.bounds

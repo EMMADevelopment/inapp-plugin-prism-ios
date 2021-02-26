@@ -10,13 +10,14 @@ import UIKit
 
 class EMMAPrismViewController: UIViewController {
     var prism: EMMAPrism? = nil
-    var prismView: EMMAPrismView? = nil
+    var prismView: EMMAPrismView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.isOpaque = false
         view.backgroundColor = UIColor.clear
         
+        prismView = EMMAPrismView()
         preparePrismView()
     }
     
@@ -32,11 +33,23 @@ class EMMAPrismViewController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
-    @objc func nextViewAction(sender: UIButton) {
+    @objc func ctaButtonAction(sender: UIButton) {
+        if let url = URL(string: prism!.sides[sender.tag].cta) {
+            let webViewController = EMMAWebViewController()
+            if #available(iOS 13.0, *) {
+                webViewController.isModalInPresentation = true;
+            }
+            webViewController.url = url
+            webViewController.modalPresentationStyle = .overFullScreen
+            self.present(webViewController, animated: true, completion: nil)
+        }
+    }
+    
+    @objc func nextSideAction(sender: UIButton) {
         prismView?.scrollToView(sender.tag, direction: .right)
     }
     
-    @objc func previousViewAction(sender: UIButton) {
+    @objc func previousSideAction(sender: UIButton) {
         prismView?.scrollToView(sender.tag, direction: .left)
     }
     
@@ -64,7 +77,7 @@ class EMMAPrismViewController: UIViewController {
         closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let ctaButton = createControlButtonToView(name:"prism_cta_btn" , action: #selector(nextViewAction),
+        let ctaButton = createControlButtonToView(name:"prism_cta_btn" , action: #selector(ctaButtonAction),
                                   size: buttonSize, pos:atPos)
         
         let constraints = [
@@ -82,10 +95,10 @@ class EMMAPrismViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
         
         if (prism!.sides.count > 1) {
-            let rightButton = createControlButtonToView(name:"prism_right_btn" , action: #selector(nextViewAction),
+            let rightButton = createControlButtonToView(name:"prism_right_btn" , action: #selector(nextSideAction),
                                       size: buttonSize, pos:atPos)
             
-            let leftButton = createControlButtonToView(name:"prism_left_btn" , action: #selector(previousViewAction),
+            let leftButton = createControlButtonToView(name:"prism_left_btn" , action: #selector(previousSideAction),
                                       size: buttonSize, pos:atPos)
             
             
@@ -152,8 +165,7 @@ class EMMAPrismViewController: UIViewController {
     }
     
     func preparePrismView() {
-        prismView = EMMAPrismView()
-        if let prism = prism, let prismView = prismView {
+        if let prism = prism{
             var sidesViews = [UIView]()
             
             for (index, side) in prism.sides.enumerated() {
