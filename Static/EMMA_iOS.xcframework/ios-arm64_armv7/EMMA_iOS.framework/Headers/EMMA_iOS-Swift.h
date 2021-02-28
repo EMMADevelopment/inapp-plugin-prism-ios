@@ -222,6 +222,14 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 
 @class EMMANativeAd;
 
+SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
+@interface EMMAInAppPluginImpl : NSObject
++ (void)sendImpressionWithCampaign:(EMMANativeAd * _Nonnull)campaign;
++ (void)sendClickWithCampaign:(EMMANativeAd * _Nonnull)campaign;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
 - (NSString * _Nonnull)getType SWIFT_WARN_UNUSED_RESULT;
@@ -501,6 +509,14 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 @end
 
 @class EMMANativeAd;
+
+SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
+@interface EMMAInAppPluginImpl : NSObject
++ (void)sendImpressionWithCampaign:(EMMANativeAd * _Nonnull)campaign;
++ (void)sendClickWithCampaign:(EMMANativeAd * _Nonnull)campaign;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol

@@ -29,11 +29,11 @@ import UIKit
   @objc func show(_ nativeAd: EMMA_iOS.EMMANativeAd)
   @objc func dismiss()
 }
-@objcMembers open class EMMAInAppPluginImpl {
-  @objc public static func sendImpression(campaign: EMMA_iOS.EMMANativeAd)
-  @objc public static func sendClick(campaign: EMMA_iOS.EMMANativeAd)
-  @objc public init()
+@objc @_inheritsConvenienceInitializers @objcMembers open class EMMAInAppPluginImpl : ObjectiveC.NSObject {
+  @objc public class func sendImpression(campaign: EMMA_iOS.EMMANativeAd)
+  @objc public class func sendClick(campaign: EMMA_iOS.EMMANativeAd)
   @objc deinit
+  @objc override dynamic public init()
 }
 public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAInAppPluginProtocol
 @objc @_inheritsConvenienceInitializers @objcMembers public class EMMAUtils : ObjectiveC.NSObject {
