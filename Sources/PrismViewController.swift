@@ -35,16 +35,26 @@ class PrismViewController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
+    private func openInApp(url: URL) {
+        let webViewController = EMMAWebViewController()
+        if #available(iOS 13.0, *) {
+            webViewController.isModalInPresentation = true;
+        }
+        webViewController.url = url
+        webViewController.modalPresentationStyle = .overFullScreen
+        self.present(webViewController, animated: true, completion: nil)
+    }
+    
     @objc func ctaButtonAction(sender: UIButton) {
         EMMAInAppPluginPrism.sendClick(campaign: nativeAd)
-        if let url = URL(string: prism!.sides[sender.tag].cta) {
-            let webViewController = EMMAWebViewController()
-            if #available(iOS 13.0, *) {
-                webViewController.isModalInPresentation = true;
+        let prismSide = prism!.sides[sender.tag]
+        if let url = URL(string: prismSide.cta) {
+            if (nativeAd.openInSafari) {
+                Utils.openUrl(url: url)
+            } else {
+                openInApp(url: url)
             }
-            webViewController.url = url
-            webViewController.modalPresentationStyle = .overFullScreen
-            self.present(webViewController, animated: true, completion: nil)
+            
         }
     }
     

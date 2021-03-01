@@ -14,15 +14,7 @@ class DeepLinkManager {
     }
     
     class func open(url: URL) {
-        DispatchQueue.main.async {
-            if UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
-            }
-        }
+        Utils.openUrl(url: url)
     }
 }
 
