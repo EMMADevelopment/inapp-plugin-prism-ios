@@ -19,6 +19,8 @@ profile
 *.cer
 *.p12
 *.mobileprovision
+archive/
+
 
 # AppCode
 .idea

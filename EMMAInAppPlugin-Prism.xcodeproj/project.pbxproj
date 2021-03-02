@@ -6,13 +6,27 @@
 	objectVersion = 52;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		11C7F27525EE49E8000C2A7A /* XC-EMMAInAppPlugin-Prism */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 11C7F27625EE49E8000C2A7A /* Build configuration list for PBXAggregateTarget "XC-EMMAInAppPlugin-Prism" */;
+			buildPhases = (
+				11C7F27B25EE49EF000C2A7A /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "XC-EMMAInAppPlugin-Prism";
+			productName = xcframework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1103A63A25E3FB8F005A2045 /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (Required, ); }; };
-		1103A63B25E3FB8F005A2045 /* EMMA_iOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		11147AC525E7204F007479F1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B1D11D25E6BC5100AB79A5 /* Media.xcassets */; };
 		115FE9D525E8FCA700F9975E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FE9D425E8FCA700F9975E /* WebViewController.swift */; };
 		115FE9D725E9206500F9975E /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FE9D625E9206500F9975E /* DeepLinkManager.swift */; };
 		116DEB1325E3C6B400F98BC5 /* PrismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEB1225E3C6B400F98BC5 /* PrismView.swift */; };
+		11C7F2A225EE61F1000C2A7A /* EMMAInAppPlugin-Prism.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11C7F2A125EE61F1000C2A7A /* EMMAInAppPlugin-Prism.plist */; };
 		11CA870125E6965C0027155A /* Prism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA86FF25E6965C0027155A /* Prism.swift */; };
 		11CA870225E6965C0027155A /* PrismSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA870025E6965C0027155A /* PrismSide.swift */; };
 		11F0A15B25E3D276004E55DA /* PrismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0A15A25E3D276004E55DA /* PrismViewController.swift */; };
@@ -20,26 +34,13 @@
 		OBJ_21 /* EMMAInAppPluginPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* EMMAInAppPluginPrism.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1103A63C25E3FB8F005A2045 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1103A63B25E3FB8F005A2045 /* EMMA_iOS.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
 		115FE9D425E8FCA700F9975E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		115FE9D625E9206500F9975E /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
 		116DEB1225E3C6B400F98BC5 /* PrismView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrismView.swift; sourceTree = "<group>"; };
 		11B1D11D25E6BC5100AB79A5 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		11C7F2A125EE61F1000C2A7A /* EMMAInAppPlugin-Prism.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EMMAInAppPlugin-Prism.plist"; sourceTree = "<group>"; };
 		11CA86FF25E6965C0027155A /* Prism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prism.swift; sourceTree = "<group>"; };
 		11CA870025E6965C0027155A /* PrismSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrismSide.swift; sourceTree = "<group>"; };
 		11F0A15A25E3D276004E55DA /* PrismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrismViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				11C7F2A125EE61F1000C2A7A /* EMMAInAppPlugin-Prism.plist */,
 				11B1D11C25E6BC3100AB79A5 /* Resources */,
 				OBJ_7 /* Sources */,
 				OBJ_9 /* Tests */,
@@ -132,7 +134,6 @@
 			buildPhases = (
 				OBJ_20 /* Sources */,
 				OBJ_22 /* Frameworks */,
-				1103A63C25E3FB8F005A2045 /* Embed Frameworks */,
 				11147AC425E72048007479F1 /* Resources */,
 			);
 			buildRules = (
@@ -151,7 +152,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 9999;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					11C7F27525EE49E8000C2A7A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "EMMAInAppPlugin-Prism" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -166,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				"EMMAInAppPlugin-Prism::EMMAInAppPlugin-Prism" /* EMMAInAppPlugin-Prism */,
+				11C7F27525EE49E8000C2A7A /* XC-EMMAInAppPlugin-Prism */,
 			);
 		};
 /* End PBXProject section */
@@ -175,11 +183,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C7F2A225EE61F1000C2A7A /* EMMAInAppPlugin-Prism.plist in Resources */,
 				11147AC525E7204F007479F1 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11C7F27B25EE49EF000C2A7A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_BUILD_FOLDER=\"archive\"\nFRAMEWORK_NAME=\"EMMAInAppPlugin-Prism\"\nFRAMEWORK_PATH=\"${PROJECT_DIR}/${FRAMEWORK_BUILD_FOLDER}/EMMAInAppPlugin_Prism.xcframework\"\nSIMULATOR_ARCHIVE_PATH=\"${PROJECT_DIR}/${FRAMEWORK_BUILD_FOLDER}/simulator.xcarchive\"\nIOS_DEVICE_ARCHIVE_PATH=\"${PROJECT_DIR}/${FRAMEWORK_BUILD_FOLDER}/iOS.xcarchive\"\n\nrm -rf \"${FRAMEWORK_BUILD_FOLDER}\"\necho \"Deleted ${FRAMEWORK_BUILD_FOLDER}\"\n\nmkdir \"${FRAMEWORK_BUILD_FOLDER}\"\necho \"Created ${FRAMEWORK_BUILD_FOLDER}\"\n\necho \"Archiving ${FRAMEWORK_NAME}\"\nxcodebuild archive -scheme ${FRAMEWORK_NAME} -destination=\"iOS Simulator\" -archivePath \"${SIMULATOR_ARCHIVE_PATH}\" -sdk iphonesimulator SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\nxcodebuild archive -scheme ${FRAMEWORK_NAME} -destination=\"iOS\" -archivePath \"${IOS_DEVICE_ARCHIVE_PATH}\" -sdk iphoneos SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework -framework ${SIMULATOR_ARCHIVE_PATH}/Products/@rpath/EMMAInAppPlugin_Prism.framework -framework ${IOS_DEVICE_ARCHIVE_PATH}/Products/@rpath/EMMAInAppPlugin_Prism.framework -output \"${FRAMEWORK_PATH}\"\n\necho \"Remove old framework\"\nrm -rf \"${PROJECT_DIR}/Static/EMMAInAppPlugin_Prism.xcframework\"\necho \"Move framework to static path\"\nmv \"${FRAMEWORK_PATH}\" \"${PROJECT_DIR}/Static\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_20 /* Sources */ = {
@@ -200,9 +229,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		11C7F27725EE49E8000C2A7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9SQWVREY8;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/Frameworks",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11C7F27825EE49E8000C2A7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9SQWVREY8;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/Frameworks",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		OBJ_18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -210,13 +269,15 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "EMMAInAppPlugin-Prism.xcodeproj/EMMAInAppPlugin_Prism_Info.plist";
-				INSTALL_PATH = "";
+				INSTALL_PATH = "@rpath";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@loader_path/Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 0.9;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -240,6 +301,8 @@
 		OBJ_19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -249,13 +312,15 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "EMMAInAppPlugin-Prism.xcodeproj/EMMAInAppPlugin_Prism_Info.plist";
-				INSTALL_PATH = "";
+				INSTALL_PATH = "@rpath";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@loader_path/Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 0.9;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -295,8 +360,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USE_HEADERMAP = NO;
@@ -319,8 +384,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -331,6 +396,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		11C7F27625EE49E8000C2A7A /* Build configuration list for PBXAggregateTarget "XC-EMMAInAppPlugin-Prism" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11C7F27725EE49E8000C2A7A /* Debug */,
+				11C7F27825EE49E8000C2A7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_17 /* Build configuration list for PBXNativeTarget "EMMAInAppPlugin-Prism" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

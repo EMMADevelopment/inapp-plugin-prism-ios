@@ -1,0 +1,15 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target i386-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EMMAInAppPlugin_Prism
+import EMMA_iOS
+import Foundation
+import Swift
+import UIKit
+import WebKit
+@_inheritsConvenienceInitializers @objcMembers public class EMMAInAppPluginPrism : EMMA_iOS.EMMAInAppPlugin {
+  @objc override dynamic public init()
+  @objc public func getType() -> Swift.String
+  @objc public func show(_ nativeAd: EMMA_iOS.EMMANativeAd)
+  @objc public func dismiss()
+  @objc deinit
+}
