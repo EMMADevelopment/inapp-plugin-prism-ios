@@ -33,7 +33,7 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     }
     
     func adjustWebviewToView() {
-        webView.translatesAutoresizingMaskIntoConstraints = false;
+        webView.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
             view.leadingAnchor.constraint(equalTo: webView.leadingAnchor),
@@ -91,20 +91,14 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        #if DEBUG
-        NSLog("Start loading \(webView.url!.absoluteString)")
-        #endif
+        Utils.log(msg: "Start loading \(webView.url!.absoluteString)")
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        #if DEBUG
-        NSLog("Finish loading \(webView.url!.absoluteString)")
-        #endif
+        Utils.log(msg: "Finish loading \(webView.url!.absoluteString)")
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        #if DEBUG
-        NSLog("Start loading \(webView.url!.absoluteString)")
-        #endif
+        Utils.log(msg: "Fail navigation \(webView.url!.absoluteString)")
     }
 }

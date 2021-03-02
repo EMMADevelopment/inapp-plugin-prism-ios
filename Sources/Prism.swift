@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import EMMA_iOS
 
 class Prism {
-    var campaignId: Int
+    var campaign: EMMACampaign
     var openInApp: Bool
     var canClose: Bool
     var sides: [PrismSide]
     
-    init(campaignId: Int, openInApp: Bool, canClose: Bool, sides: [PrismSide]) {
-        self.campaignId = campaignId
+    init(campaign: EMMACampaign, openInApp: Bool, canClose: Bool, sides: [PrismSide]) {
+        self.campaign = campaign
         self.openInApp = openInApp
         self.canClose = canClose
         self.sides = sides

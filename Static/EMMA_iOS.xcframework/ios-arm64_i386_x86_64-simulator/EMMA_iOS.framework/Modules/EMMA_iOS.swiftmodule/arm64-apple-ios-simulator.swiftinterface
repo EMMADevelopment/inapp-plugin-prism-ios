@@ -30,8 +30,8 @@ import UIKit
   @objc func dismiss()
 }
 @objc @_inheritsConvenienceInitializers @objcMembers open class EMMAInAppPluginImpl : ObjectiveC.NSObject {
-  @objc public class func sendImpression(campaign: EMMA_iOS.EMMANativeAd)
-  @objc public class func sendClick(campaign: EMMA_iOS.EMMANativeAd)
+  @objc public class func sendImpression(campaign: EMMA_iOS.EMMACampaign)
+  @objc public class func sendClick(campaign: EMMA_iOS.EMMACampaign)
   @objc deinit
   @objc override dynamic public init()
 }

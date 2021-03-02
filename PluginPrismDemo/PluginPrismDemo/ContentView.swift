@@ -13,13 +13,13 @@ struct ContentView: View {
 
     func getFakeNative() -> EMMANativeAd {
         let nativeAd = EMMANativeAd()
-        nativeAd.idPromo = 123423
+        nativeAd.idPromo = 123456789
         nativeAd.openInSafari = true
         nativeAd.canClose = true
         nativeAd.nativeAdContent = ["Container":[
-                ["Main Picture": "https://i.picsum.photos/id/586/300/700.jpg?hmac=TKBELClTbUvaXq5NHUpCVnnhssZ3tYTSLTYBi6rPo5Q", "CTA": "https://google.es"
+                ["Main picture": "https://i.picsum.photos/id/586/300/700.jpg?hmac=TKBELClTbUvaXq5NHUpCVnnhssZ3tYTSLTYBi6rPo5Q", "CTA": "https://google.es"
                 ],
-                ["Main Picture": "https://i.picsum.photos/id/666/300/700.jpg?hmac=mXEaSU1_1gEAtK3z-beAT7GyWGt8oYsa34QOXLBx-qY","CTA": "https://emma.io"
+                ["Main picture": "https://i.picsum.photos/id/666/300/700.jpg?hmac=mXEaSU1_1gEAtK3z-beAT7GyWGt8oYsa34QOXLBx-qY","CTA": "https://emma.io"
                 ]
             ]
           ]

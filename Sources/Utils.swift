@@ -24,4 +24,10 @@ class Utils {
             }
         }
     }
+    
+    class func log(msg: String) {
+        #if DEBUG
+        NSLog(msg)
+        #endif
+    }
 }

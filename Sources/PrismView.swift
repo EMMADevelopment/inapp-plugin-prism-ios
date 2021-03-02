@@ -37,6 +37,7 @@ class PrismView: UIScrollView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        configureScrollView()
     }
     
     override func layoutSubviews() {

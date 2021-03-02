@@ -220,15 +220,16 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class EMMANativeAd;
+@class EMMACampaign;
 
 SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
-+ (void)sendImpressionWithCampaign:(EMMANativeAd * _Nonnull)campaign;
-+ (void)sendClickWithCampaign:(EMMANativeAd * _Nonnull)campaign;
++ (void)sendImpressionWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)sendClickWithCampaign:(EMMACampaign * _Nonnull)campaign;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class EMMANativeAd;
 
 SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
@@ -508,15 +509,16 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class EMMANativeAd;
+@class EMMACampaign;
 
 SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
-+ (void)sendImpressionWithCampaign:(EMMANativeAd * _Nonnull)campaign;
-+ (void)sendClickWithCampaign:(EMMANativeAd * _Nonnull)campaign;
++ (void)sendImpressionWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)sendClickWithCampaign:(EMMACampaign * _Nonnull)campaign;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class EMMANativeAd;
 
 SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
@@ -796,15 +798,16 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class EMMANativeAd;
+@class EMMACampaign;
 
 SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
-+ (void)sendImpressionWithCampaign:(EMMANativeAd * _Nonnull)campaign;
-+ (void)sendClickWithCampaign:(EMMANativeAd * _Nonnull)campaign;
++ (void)sendImpressionWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)sendClickWithCampaign:(EMMACampaign * _Nonnull)campaign;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class EMMANativeAd;
 
 SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol

@@ -12,7 +12,6 @@ import EMMA_iOS
 class PrismViewController: UIViewController {
     var prism: Prism? = nil
     var prismView: PrismView!
-    var nativeAd: EMMANativeAd!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +45,14 @@ class PrismViewController: UIViewController {
     }
     
     @objc func ctaButtonAction(sender: UIButton) {
-        EMMAInAppPluginPrism.sendClick(campaign: nativeAd)
+        EMMAInAppPluginPrism.sendClick(campaign: prism!.campaign)
         let prismSide = prism!.sides[sender.tag]
         if let url = URL(string: prismSide.cta) {
-            if (nativeAd.openInSafari) {
-                Utils.openUrl(url: url)
-            } else {
+            if (prism!.openInApp) {
                 openInApp(url: url)
+            } else {
+                Utils.openUrl(url: url)
             }
-            
         }
     }
     
@@ -67,7 +65,6 @@ class PrismViewController: UIViewController {
     }
     
     func createControlButtonToView(name: String, action: Selector, size: CGFloat, pos: Int) -> UIButton {
-        
         let img = UIImage(named: name,
                                   in: Bundle.init(for: self.classForCoder), compatibleWith: nil)
         
@@ -186,7 +183,7 @@ class PrismViewController: UIViewController {
     }
     
     func preparePrismView() {
-        if let prism = prism{
+        if let prism = prism {
             var sidesViews = [UIView]()
             
             for (index, side) in prism.sides.enumerated() {
@@ -218,7 +215,7 @@ class PrismViewController: UIViewController {
             prismView.contentOffset = CGPoint(x:prismView.bounds.width, y:0)
             prismView.isHidden = false
 
-            EMMAInAppPluginPrism.sendImpression(campaign: nativeAd)
+            EMMAInAppPluginPrism.sendImpression(campaign: prism.campaign)
         }
     }
 }
