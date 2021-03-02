@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "EMMA_iOS",
+        "repositoryURL": "https://github.com/EMMADevelopment/eMMa-iOS-SDK.git",
+        "state": {
+          "branch": null,
+          "revision": "0e76062db721200949c790c70c7f2b46dceb4d5b",
+          "version": "4.9.0-beta2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
