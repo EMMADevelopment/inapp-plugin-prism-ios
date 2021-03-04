@@ -14,7 +14,7 @@ struct ContentView: View {
     func getFakeNative() -> EMMANativeAd {
         let nativeAd = EMMANativeAd()
         nativeAd.idPromo = 123456789
-        nativeAd.openInSafari = true
+        nativeAd.openInSafari = false
         nativeAd.canClose = true
         nativeAd.nativeAdContent = ["Container":[
                 ["Main picture": "https://i.picsum.photos/id/586/300/700.jpg?hmac=TKBELClTbUvaXq5NHUpCVnnhssZ3tYTSLTYBi6rPo5Q", "CTA": "https://google.es"

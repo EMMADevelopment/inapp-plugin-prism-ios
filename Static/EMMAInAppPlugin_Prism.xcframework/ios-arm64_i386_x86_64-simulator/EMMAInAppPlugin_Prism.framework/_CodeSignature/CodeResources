@@ -6,9 +6,9 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		XMy6dkl1q2MyQ9ZAi34xaSea3XM=
+		ASQadMG7qOZBBgVtwfMulni1UZo=
 		</data>
-		<key>EMMAInAppPlugin.plist</key>
+		<key>EMMAInAppPlugin-Prism.plist</key>
 		<data>
 		exmsmnqtZBl6O4cLRjb7iwByosg=
 		</data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Vfjos6VAMRavDrYqEkxbSUbAuyM=
+		EpV5eKJol0zRgLSEMs/0mU3o9YE=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		RYw/DafzmHVW18VkTUHg4tL+LpU=
+		1bB7d7f4lEPYHHdMUltFxvGSQqA=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ns4NpoIWYBxUhcTD4ySK+BPyVLA=
+		N/HoMqwlMfj/GJM9LOl8xkQ6QS4=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		RYw/DafzmHVW18VkTUHg4tL+LpU=
+		1bB7d7f4lEPYHHdMUltFxvGSQqA=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ns4NpoIWYBxUhcTD4ySK+BPyVLA=
+		N/HoMqwlMfj/GJM9LOl8xkQ6QS4=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		KvU/zqdBIzq45YE9PjiEnrhtwCk=
+		xeGrEaYixFGQQHj7Fu0cLOePDAw=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WMOj8HvOqH/IUOWhR/uREWrdTg4=
+		/Me92G7Yxo7TAZdQ3e4T+tdjpOg=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386.swiftinterface</key>
 		<data>
-		KvU/zqdBIzq45YE9PjiEnrhtwCk=
+		xeGrEaYixFGQQHj7Fu0cLOePDAw=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386.swiftmodule</key>
 		<data>
-		WMOj8HvOqH/IUOWhR/uREWrdTg4=
+		/Me92G7Yxo7TAZdQ3e4T+tdjpOg=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		0ayvpDLqhnVAQ7F2qFqT4HtsmEg=
+		CLxBQzgof2DNcxqvjeMtMd3+3Vc=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/p6Ev7EkZgbzH319nC1pztb63+I=
+		UhgIadKojnQwwG4E1xEO1Pt0t0s=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		0ayvpDLqhnVAQ7F2qFqT4HtsmEg=
+		CLxBQzgof2DNcxqvjeMtMd3+3Vc=
 		</data>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		/p6Ev7EkZgbzH319nC1pztb63+I=
+		UhgIadKojnQwwG4E1xEO1Pt0t0s=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -99,14 +99,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XMy6dkl1q2MyQ9ZAi34xaSea3XM=
+			ASQadMG7qOZBBgVtwfMulni1UZo=
 			</data>
 			<key>hash2</key>
 			<data>
-			O9FndZOfgnb08z5foIQfdgDuASoVj9q2nrs7F/hZFqM=
+			j8JXa9cg3M76Muvibn9MF0YSVq9r4mAuQoWikLfV2TM=
 			</data>
 		</dict>
-		<key>EMMAInAppPlugin.plist</key>
+		<key>EMMAInAppPlugin-Prism.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -143,22 +143,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RYw/DafzmHVW18VkTUHg4tL+LpU=
+			1bB7d7f4lEPYHHdMUltFxvGSQqA=
 			</data>
 			<key>hash2</key>
 			<data>
-			VJF1w0G46Ukmd+wqSCV2INWzqY/B77J8chhjgicr+Io=
+			pgzo7iqplN5Lhaz6dajjdLU1FigtHbiJ8A35w4Xh+yo=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ns4NpoIWYBxUhcTD4ySK+BPyVLA=
+			N/HoMqwlMfj/GJM9LOl8xkQ6QS4=
 			</data>
 			<key>hash2</key>
 			<data>
-			wzsdBs2yOWr2esAiNgymhErj0k/YnEcrjm/rTMesvYo=
+			EJGuj9kC03eTbbP85pJVNpMWg9G5wkjzEIUrvnM8qYo=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64.swiftdoc</key>
@@ -176,22 +176,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RYw/DafzmHVW18VkTUHg4tL+LpU=
+			1bB7d7f4lEPYHHdMUltFxvGSQqA=
 			</data>
 			<key>hash2</key>
 			<data>
-			VJF1w0G46Ukmd+wqSCV2INWzqY/B77J8chhjgicr+Io=
+			pgzo7iqplN5Lhaz6dajjdLU1FigtHbiJ8A35w4Xh+yo=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ns4NpoIWYBxUhcTD4ySK+BPyVLA=
+			N/HoMqwlMfj/GJM9LOl8xkQ6QS4=
 			</data>
 			<key>hash2</key>
 			<data>
-			wzsdBs2yOWr2esAiNgymhErj0k/YnEcrjm/rTMesvYo=
+			EJGuj9kC03eTbbP85pJVNpMWg9G5wkjzEIUrvnM8qYo=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -209,22 +209,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KvU/zqdBIzq45YE9PjiEnrhtwCk=
+			xeGrEaYixFGQQHj7Fu0cLOePDAw=
 			</data>
 			<key>hash2</key>
 			<data>
-			oCvKOKCnmOms1Q/qjGSLw1on6lDWGH99avLFHACjfrQ=
+			oi+yKo6SDic+b20ESGepLd0efF8hWBOEmIwh9SgvGOA=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WMOj8HvOqH/IUOWhR/uREWrdTg4=
+			/Me92G7Yxo7TAZdQ3e4T+tdjpOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			O6KL9NdJ9Ir3+LR8aylW/gx6v5FKR6hvBTs2asmUI40=
+			fH+zd0WaZzNnPT2jHDj49Ss22dFt5pEGD1UumhdlUvM=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386.swiftdoc</key>
@@ -242,22 +242,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KvU/zqdBIzq45YE9PjiEnrhtwCk=
+			xeGrEaYixFGQQHj7Fu0cLOePDAw=
 			</data>
 			<key>hash2</key>
 			<data>
-			oCvKOKCnmOms1Q/qjGSLw1on6lDWGH99avLFHACjfrQ=
+			oi+yKo6SDic+b20ESGepLd0efF8hWBOEmIwh9SgvGOA=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WMOj8HvOqH/IUOWhR/uREWrdTg4=
+			/Me92G7Yxo7TAZdQ3e4T+tdjpOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			O6KL9NdJ9Ir3+LR8aylW/gx6v5FKR6hvBTs2asmUI40=
+			fH+zd0WaZzNnPT2jHDj49Ss22dFt5pEGD1UumhdlUvM=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -275,22 +275,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0ayvpDLqhnVAQ7F2qFqT4HtsmEg=
+			CLxBQzgof2DNcxqvjeMtMd3+3Vc=
 			</data>
 			<key>hash2</key>
 			<data>
-			z9z/YBgwnbk/L8AV9hDg4Hv9w1dyNeJC7jxa411SEno=
+			UClrL18XhEVJCJ1Ab3YA/SOMmUhXZzjD9MoXBcubMZg=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/p6Ev7EkZgbzH319nC1pztb63+I=
+			UhgIadKojnQwwG4E1xEO1Pt0t0s=
 			</data>
 			<key>hash2</key>
 			<data>
-			U75uJoG66WPkR9sPpyC48Tsq5MyMsTzWRBMzdXatHUo=
+			p6V39AMnfHeeLDCHHlFrDMOETVn319zc8A/h1wYKDpI=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftdoc</key>
@@ -308,22 +308,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0ayvpDLqhnVAQ7F2qFqT4HtsmEg=
+			CLxBQzgof2DNcxqvjeMtMd3+3Vc=
 			</data>
 			<key>hash2</key>
 			<data>
-			z9z/YBgwnbk/L8AV9hDg4Hv9w1dyNeJC7jxa411SEno=
+			UClrL18XhEVJCJ1Ab3YA/SOMmUhXZzjD9MoXBcubMZg=
 			</data>
 		</dict>
 		<key>Modules/EMMAInAppPlugin_Prism.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/p6Ev7EkZgbzH319nC1pztb63+I=
+			UhgIadKojnQwwG4E1xEO1Pt0t0s=
 			</data>
 			<key>hash2</key>
 			<data>
-			U75uJoG66WPkR9sPpyC48Tsq5MyMsTzWRBMzdXatHUo=
+			p6V39AMnfHeeLDCHHlFrDMOETVn319zc8A/h1wYKDpI=
 			</data>
 		</dict>
 	</dict>

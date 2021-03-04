@@ -8,7 +8,7 @@ import UIKit
 import WebKit
 @_inheritsConvenienceInitializers @objcMembers public class EMMAInAppPluginPrism : EMMA_iOS.EMMAInAppPlugin {
   @objc override dynamic public init()
-  @objc public func getType() -> Swift.String
+  @objc public func getId() -> Swift.String
   @objc public func show(_ nativeAd: EMMA_iOS.EMMANativeAd)
   @objc public func dismiss()
   @objc deinit

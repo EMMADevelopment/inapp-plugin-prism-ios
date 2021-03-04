@@ -75,7 +75,7 @@ class PrismViewController: UIViewController {
         prismView?.scrollToView(sender.tag, direction: .left)
     }
     
-    func createControlButtonToView(name: String, action: Selector, size: CGFloat, pos: Int) -> UIButton {
+    func createControlButtonToView(name: String, action: Selector, pos: Int) -> UIButton {
         let img = UIImage(named: name,
                                   in: Bundle.init(for: self.classForCoder), compatibleWith: nil)
         
@@ -89,56 +89,43 @@ class PrismViewController: UIViewController {
     }
     
     func addButtons(toView: UIView, atPos: Int) {
-        let buttonSize: CGFloat = 30
-        
-        let closeButton = UIButton(frame: CGRect(x: viewWidth() - buttonSize  , y:0 , width:buttonSize , height: buttonSize))
-        closeButton.tintColor = .white
-        closeButton.setTitle("x", for: .normal)
-        closeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
-        closeButton.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
-        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        let closeButton = createControlButtonToView(name:"prism_close_btn",
+                                                    action: #selector(closeAction), pos:atPos)
 
         let closeButtonConstraints = [
-            closeButton.heightAnchor.constraint(equalToConstant: buttonSize),
-            closeButton.widthAnchor.constraint(equalToConstant: buttonSize),
-            closeButton.trailingAnchor.constraint(equalTo: toView.trailingAnchor)
+            closeButton.topAnchor.constraint(equalTo: toView.topAnchor, constant: 5.0),
+            closeButton.trailingAnchor.constraint(equalTo: toView.trailingAnchor, constant: -5.0)
         ]
 
         toView.addSubview(closeButton)
         NSLayoutConstraint.activate(closeButtonConstraints)
 
         if (!prism!.sides[atPos].cta.isEmpty) {
-            let ctaButton = createControlButtonToView(name:"prism_cta_btn" , action: #selector(ctaButtonAction),
-                                                      size: buttonSize, pos:atPos)
+            let ctaButton = createControlButtonToView(name:"prism_cta_btn" ,
+                                                      action: #selector(ctaButtonAction), pos:atPos)
 
             toView.addSubview(ctaButton)
 
             let ctaButtonConstraints = [
-                ctaButton.heightAnchor.constraint(equalToConstant: buttonSize),
-                ctaButton.widthAnchor.constraint(equalToConstant: buttonSize),
                 ctaButton.centerXAnchor.constraint(equalTo: toView.centerXAnchor),
-                ctaButton.bottomAnchor.constraint(equalTo: toView.bottomAnchor),
+                ctaButton.bottomAnchor.constraint(equalTo: toView.bottomAnchor, constant: -5.0),
             ]
 
             NSLayoutConstraint.activate(ctaButtonConstraints)
         }
         
         if (prism!.sides.count > 1) {
-            let rightButton = createControlButtonToView(name:"prism_right_btn" , action: #selector(nextSideAction),
-                                      size: buttonSize, pos:atPos)
+            let rightButton = createControlButtonToView(name:"prism_right_btn",
+                                                        action: #selector(nextSideAction), pos:atPos)
             
-            let leftButton = createControlButtonToView(name:"prism_left_btn" , action: #selector(previousSideAction),
-                                      size: buttonSize, pos:atPos)
+            let leftButton = createControlButtonToView(name:"prism_left_btn" ,
+                                                       action: #selector(previousSideAction), pos:atPos)
             
             
             toView.addSubview(rightButton)
             toView.addSubview(leftButton)
             
             let constraints = [
-                rightButton.heightAnchor.constraint(equalToConstant: buttonSize),
-                leftButton.heightAnchor.constraint(equalToConstant: buttonSize),
-                rightButton.widthAnchor.constraint(equalToConstant: buttonSize),
-                leftButton.widthAnchor.constraint(equalToConstant: buttonSize),
                 rightButton.centerYAnchor.constraint(equalTo: toView.centerYAnchor),
                 leftButton.centerYAnchor.constraint(equalTo: toView.centerYAnchor),
                 rightButton.trailingAnchor.constraint(equalTo: toView.trailingAnchor),

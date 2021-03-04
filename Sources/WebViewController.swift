@@ -10,11 +10,12 @@ import WebKit
 
 class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
+    var activityIndicator: UIActivityIndicatorView!
     var url: URL? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .clear
+        view.backgroundColor = .white
         view.isOpaque = false
 
         let webViewConfig = WKWebViewConfiguration()
@@ -24,12 +25,29 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         webView.backgroundColor = .clear
         
+        activityIndicator = UIActivityIndicatorView()
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        
+        if #available(iOS 13.0, *) {
+            activityIndicator.style = .large
+        } else {
+            activityIndicator.style = .gray
+        }
+        
         view.addSubview(webView)
+        view.addSubview(activityIndicator)
         
         adjustWebviewToView()
         addCloseButton()
         
         view.layoutIfNeeded()
+        
+        if let url = url {
+            webView.load(URLRequest(url: url))
+        }
+        
+        activityIndicator.startAnimating()
     }
     
     func adjustWebviewToView() {
@@ -43,12 +61,6 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
         ]
         
         NSLayoutConstraint.activate(constraints)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if let url = url {
-            webView.load(URLRequest(url: url))
-        }
     }
 
     func addCloseButton() {
@@ -96,6 +108,9 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         Utils.log(msg: "Finish loading \(webView.url!.absoluteString)")
+        webView.evaluateJavaScript("document.title") { (result, error) in
+            self.activityIndicator.stopAnimating()
+        }
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {

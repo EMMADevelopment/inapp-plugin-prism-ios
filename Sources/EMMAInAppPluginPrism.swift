@@ -59,5 +59,6 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
     }
     
     public func dismiss() {
+
     }
 }
