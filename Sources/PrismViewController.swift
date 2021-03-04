@@ -13,13 +13,23 @@ class PrismViewController: UIViewController {
     var prism: Prism? = nil
     var prismView: PrismView!
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.isOpaque = false
         view.backgroundColor = UIColor.clear
         
+        NotificationCenter.default.addObserver(self,selector: #selector(willEnterInForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
         prismView = PrismView()
         preparePrismView()
+    }
+    
+    @objc func willEnterInForeground() {
+        prismView?.reset()
     }
     
     func viewHeight () -> CGFloat {
@@ -30,7 +40,8 @@ class PrismViewController: UIViewController {
         return view.bounds.width * 0.7
     }
     
-    @objc func closeButtonAction() {
+    @objc func closeAction() {
+        EMMAInAppPluginPrism.invokeCloseDelegates(campaign: prism!.campaign)
         dismiss(animated: false, completion: nil)
     }
     
@@ -84,7 +95,7 @@ class PrismViewController: UIViewController {
         closeButton.tintColor = .white
         closeButton.setTitle("x", for: .normal)
         closeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
-        closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
 
         let closeButtonConstraints = [
@@ -168,6 +179,7 @@ class PrismViewController: UIViewController {
         if let imageUrl = URL(string: url) {
             URLSession.shared.dataTask(with: imageUrl, completionHandler: { data, response, error in
                 guard let data = data, error == nil else {
+                    Utils.log(msg: "Cannot download image \(url)")
                     return
                 }
                 self.addImage(data: data, toView: view)
@@ -215,6 +227,7 @@ class PrismViewController: UIViewController {
             prismView.contentOffset = CGPoint(x:prismView.bounds.width, y:0)
             prismView.isHidden = false
 
+            EMMAInAppPluginPrism.invokeShownDelegates(campaign: prism.campaign)
             EMMAInAppPluginPrism.sendImpression(campaign: prism.campaign)
         }
     }

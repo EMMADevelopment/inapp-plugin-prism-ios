@@ -25,13 +25,16 @@ import UIKit
   @objc deinit
 }
 @objc public protocol EMMAInAppPluginProtocol {
-  @objc func getType() -> Swift.String
+  @objc func getId() -> Swift.String
   @objc func show(_ nativeAd: EMMA_iOS.EMMANativeAd)
   @objc func dismiss()
 }
 @objc @_inheritsConvenienceInitializers @objcMembers open class EMMAInAppPluginImpl : ObjectiveC.NSObject {
   @objc public class func sendImpression(campaign: EMMA_iOS.EMMACampaign)
   @objc public class func sendClick(campaign: EMMA_iOS.EMMACampaign)
+  @objc public class func invokeShownDelegates(campaign: EMMA_iOS.EMMACampaign)
+  @objc public class func invokeHideDelegates(campaign: EMMA_iOS.EMMACampaign)
+  @objc public class func invokeCloseDelegates(campaign: EMMA_iOS.EMMACampaign)
   @objc deinit
   @objc override dynamic public init()
 }

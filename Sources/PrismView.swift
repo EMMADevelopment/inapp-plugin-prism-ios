@@ -16,7 +16,6 @@ enum PrismDirection {
 class PrismView: UIScrollView {
     private let maxAngle: CGFloat = 60.0
     private var prismSideViews = [UIView]()
-    private var manualScroll = false
    
     private lazy var stackView: UIStackView = {
         let sv = UIStackView()
@@ -35,22 +34,28 @@ class PrismView: UIScrollView {
         configureScrollView()
     }
     
+    func reset() {
+        for view in stackView.subviews {
+            view.layer.anchorPoint = CGPoint(x:0.5, y:0.5)
+            view.layer.transform.m34 = 0.0
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        configureScrollView()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
     }
-    
+
     func addPrismSides(_ views: [UIView]) {
         for view in views {
             view.layer.masksToBounds = true
             stackView.addArrangedSubview(view)
             
             addConstraint(view.widthAnchor.constraint(equalTo: widthAnchor))
-            
+
             prismSideViews.append(view)
         }
     }
@@ -97,7 +102,6 @@ class PrismView: UIScrollView {
         
     private func configureScrollView() {
         isHidden = true
-        backgroundColor = UIColor.white
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
         isPagingEnabled = true

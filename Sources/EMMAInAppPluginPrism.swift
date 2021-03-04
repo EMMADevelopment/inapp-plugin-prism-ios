@@ -7,7 +7,7 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
         super.init()
     }
     
-    public func getType() -> String {
+    public func getId() -> String {
         return "emma-plugin-prism"
     }
     
@@ -16,7 +16,7 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
             Utils.log(msg: "This plugin requires EMMA SDK >= 4.9.0")
             return
         }
-        
+            
         DispatchQueue.main.async {
             if let rootViewController = EMMA.rootViewController() {
                 let prism = self.convertNativeAdToPrism(nativeAd)
@@ -25,6 +25,7 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
                 if #available(iOS 13.0, *) {
                     prismViewController.isModalInPresentation = true
                 }
+                
                 prismViewController.prism = prism
                 prismViewController.modalPresentationStyle = .overFullScreen
                 prismViewController.view.bounds = rootViewController.view.bounds
@@ -58,6 +59,5 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
     }
     
     public func dismiss() {
-        
     }
 }

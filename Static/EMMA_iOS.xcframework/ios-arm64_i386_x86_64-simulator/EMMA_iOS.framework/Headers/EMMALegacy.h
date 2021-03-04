@@ -689,5 +689,11 @@ For a simple configuration put this in you AppDelegate's method:
 
 +(nullable UIViewController*) rootViewController;
 
++(void) invokeShownDelegates:(EMMACampaign*) campaign;
+
++(void) invokeHideDelegates:(EMMACampaign*) campaign;
+
++(void) invokeCloseDelegates:(EMMACampaign*) campaign;
+
 #pragma clang diagnostic pop
 @end
