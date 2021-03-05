@@ -17,7 +17,7 @@ struct ContentView: View {
         nativeAd.openInSafari = false
         nativeAd.canClose = true
         nativeAd.nativeAdContent = ["container":[
-                ["Main picture": "https://i.picsum.photos/id/586/300/700.jpg?hmac=TKBELClTbUvaXq5NHUpCVnnhssZ3tYTSLTYBi6rPo5Q", "CTA": "https://google.es"
+                ["Main picture": "https://i.picsum.photos/id/586/300/700.jpg?hmac=TKBELClTbUvaXq5NHUpCVnnhssZ3tYTSLTYBi6rPo5Q", "CTA": "emmaio://tab/?d=1"
                 ],
                 ["Main picture": "https://i.picsum.photos/id/666/300/700.jpg?hmac=mXEaSU1_1gEAtK3z-beAT7GyWGt8oYsa34QOXLBx-qY","CTA": "https://emma.io"
                 ]

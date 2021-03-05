@@ -46,6 +46,11 @@ class PrismViewController: UIViewController {
     }
     
     private func openInApp(url: URL) {
+        if DeepLinkManager.isDeeplink(url: url) {
+            DeepLinkManager.open(url: url)
+            return
+        }
+        
         let webViewController = EMMAWebViewController()
         if #available(iOS 13.0, *) {
             webViewController.isModalInPresentation = true;

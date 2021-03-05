@@ -92,9 +92,10 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     @objc func close() {
         dismiss(animated: true, completion: nil)
     }
+
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if let url = navigationAction.request.url, DeepLinkManager.isDeeplink(url: url ) {
+        if let url = navigationAction.request.url, DeepLinkManager.isDeeplink(url: url), url.host != nil {
             DeepLinkManager.open(url: url)
             close()
         }
@@ -114,6 +115,14 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        Utils.log(msg: "Fail navigation \(webView.url!.absoluteString)")
+        Utils.log(msg: "Navigation failed \(webView.url!.absoluteString) with error \(error.localizedDescription)")
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        Utils.log(msg: "Commit navigation")
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        Utils.log(msg: "Provisional navigation failed \(webView.url!.absoluteString) with error \(error.localizedDescription)")
     }
 }
