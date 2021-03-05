@@ -14,7 +14,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/EMMADevelopment/eMMa-iOS-SDK.git", from: Version(4, 9, 0, prereleaseIdentifiers: ["beta"])),
+        .package(url: "https://github.com/EMMADevelopment/eMMa-iOS-SDK.git", from: Version(4, 9, 0, prereleaseIdentifiers: ["beta4"])),
     ],
     targets: [
         .target(

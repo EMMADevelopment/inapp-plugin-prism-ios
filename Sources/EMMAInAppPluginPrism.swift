@@ -8,7 +8,7 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
     }
     
     public func getId() -> String {
-        return "emma-plugin-prism"
+        return "emma-plugin-prisma"
     }
     
     public func show(_ nativeAd: EMMANativeAd) {

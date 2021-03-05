@@ -19,6 +19,6 @@
 
 -(BOOL) parseResponseInfo: (NSDictionary*) responseDict;
 
--(NSString*) getField: (NSString *) fieldKey;
+-(NSString*) getField: (NSString *) fieldKey __attribute__((deprecated("This method was deprecated due to container templates. Use nativeAdContent and parse data according to needs")));
 
 @end

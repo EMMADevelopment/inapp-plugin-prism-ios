@@ -83,7 +83,7 @@ public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAI
   public static func addInAppDelegate(delegate: EMMA_iOS.EMMAInAppMessageDelegate)
   public static func removeInAppDelegate(delegate: EMMA_iOS.EMMAInAppMessageDelegate)
   public static func addCouponDelegate(delegate: EMMA_iOS.EMMACouponDelegate)
-  public static func openNativeAd(nativeAdCampaignId: Swift.String)
+  public static func openNativeAd(campaignId: Swift.String)
   public static func sendImpression(campaignType: EMMA_iOS.EMMACampaignType, withId campaignId: Swift.String)
   public static func sendClick(campaignType: EMMA_iOS.EMMACampaignType, withId campaignId: Swift.String)
   public static func setStartViewOptions(options: EMMA_iOS.EMMAStartViewOptions)

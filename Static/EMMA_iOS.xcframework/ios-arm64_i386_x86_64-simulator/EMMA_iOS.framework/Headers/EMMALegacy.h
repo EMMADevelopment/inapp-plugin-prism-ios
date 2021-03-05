@@ -275,7 +275,7 @@ For a simple configuration put this in you AppDelegate's method:
  *
  * @param nativeAdCampaignId The campaign identifier
  */
-+(void)openNativeAd:(NSString *) nativeAdCampaignId;
++(void)openNativeAd:(NSString *) campaignId;
 
 /**
  * Method sends impression event for specific campaign
