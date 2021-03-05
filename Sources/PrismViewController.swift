@@ -144,7 +144,7 @@ class PrismViewController: UIViewController {
             let imageView = UIImageView(frame: toView.frame)
             imageView.center = toView.center
             imageView.image = image
-            imageView.contentMode = UIView.ContentMode.scaleToFill
+            imageView.contentMode = UIView.ContentMode.scaleAspectFill
             toView.addSubview(imageView)
             
             imageView.translatesAutoresizingMaskIntoConstraints = false
