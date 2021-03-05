@@ -26,6 +26,11 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
                     prismViewController.isModalInPresentation = true
                 }
                 
+                if (prism.sides.isEmpty) {
+                    Utils.log(msg: "Prism sides are empty")
+                    return
+                }
+                
                 prismViewController.prism = prism
                 prismViewController.modalPresentationStyle = .overFullScreen
                 prismViewController.view.bounds = rootViewController.view.bounds
@@ -46,7 +51,7 @@ public class EMMAInAppPluginPrism: EMMAInAppPlugin {
         let openInApp = !nativeAd.openInSafari
         let content = nativeAd.nativeAdContent
         
-        if let container = content?["Container"] as? Array<[String: String]> {
+        if let container = content?["container"] as? Array<[String: String]> {
             container.forEach { (containerFields: [String : String]) in
                 if let prismSide = createPrismSide(fields: containerFields) {
                     sides.append(prismSide)
