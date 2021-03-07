@@ -1,12 +1,12 @@
 # inapp-plugin-prism-ios
 
-## INTRODUCTION
+## Introduction
 
 Plugin for EMMA in-app communication. This plugin shows a prism with 10 sides as maximum. 
 
 You can create your own plugin through native ad engine.
 
-## INSTALLATION
+## Installation
 
 **Version 4.9.0+ of EMMA SDK and Xcode 12+ is required**
 
@@ -15,7 +15,7 @@ For integrate this plugin you can download with Swift Package Manager:
 1. Open Xcode and select File > Swift Packages > Add Package Dependency
 2. Add the repo url and select version 4.9.0+ as minimum or master branch
 
-## INTEGRATION
+## Integration
 
 Import the library in AppDelegate and add plugin class to SDK.
 
