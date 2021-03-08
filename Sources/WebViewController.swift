@@ -8,10 +8,16 @@
 import WebKit
 
 
+protocol WebViewProtocol: AnyObject {
+    func onDeepLinkOpened()
+}
+
 class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var activityIndicator: UIActivityIndicatorView!
     var url: URL? = nil
+    
+    weak var webViewDelegate: WebViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +103,7 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let url = navigationAction.request.url, DeepLinkManager.isDeeplink(url: url), url.host != nil {
             DeepLinkManager.open(url: url)
+            webViewDelegate?.onDeepLinkOpened()
             close()
         }
         

@@ -36,9 +36,9 @@ class PrismView: UIScrollView {
     
     func reset() {
         for view in stackView.subviews {
-            view.layer.anchorPoint = CGPoint(x:0.5, y:0.5)
-            view.layer.transform.m34 = 0.0
+            view.layer.transform = CATransform3DIdentity
         }
+        layoutIfNeeded()
     }
     
     required init?(coder aDecoder: NSCoder) {

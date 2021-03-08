@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import EMMA_iOS
 
-class PrismViewController: UIViewController {
+class PrismViewController: UIViewController, WebViewProtocol {
     var prism: Prism? = nil
     var prismView: PrismView!
     
@@ -45,9 +45,14 @@ class PrismViewController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
+    func onDeepLinkOpened() {
+        closeAction()
+    }
+    
     private func openInApp(url: URL) {
         if DeepLinkManager.isDeeplink(url: url) {
             DeepLinkManager.open(url: url)
+            onDeepLinkOpened()
             return
         }
         
