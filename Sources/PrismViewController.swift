@@ -186,6 +186,7 @@ class PrismViewController: UIViewController, WebViewProtocol {
     
     func preparePrismSideView(side: PrismSide, position: Int) -> UIView {
         let sideView = UIView()
+        sideView.backgroundColor = UIColor.white
         downloadImageContent(view: sideView, url: side.image)
         addButtons(toView: sideView, atPos: position)
         return sideView
