@@ -65,6 +65,16 @@ class PrismViewController: UIViewController, WebViewProtocol {
         self.present(webViewController, animated: true, completion: nil)
     }
     
+    private func openOutApp(url: URL) {
+        if DeepLinkManager.isDeeplink(url: url) {
+            DeepLinkManager.open(url: url)
+            onDeepLinkOpened()
+            return
+        }
+        
+        Utils.openUrl(url: url)
+    }
+    
     @objc func ctaButtonAction(sender: UIButton) {
         EMMAInAppPluginPrism.sendClick(campaign: prism!.campaign)
         let prismSide = prism!.sides[sender.tag]
@@ -72,7 +82,7 @@ class PrismViewController: UIViewController, WebViewProtocol {
             if (prism!.openInApp) {
                 openInApp(url: url)
             } else {
-                Utils.openUrl(url: url)
+                openOutApp(url: url)
             }
         }
     }
