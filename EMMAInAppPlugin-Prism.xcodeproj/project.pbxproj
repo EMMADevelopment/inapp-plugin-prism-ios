@@ -31,6 +31,7 @@
 		11CA870225E6965C0027155A /* PrismSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA870025E6965C0027155A /* PrismSide.swift */; };
 		11F0A15B25E3D276004E55DA /* PrismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0A15A25E3D276004E55DA /* PrismViewController.swift */; };
 		3AFE8EA925EBEDDA00BCBB27 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE8EA825EBEDDA00BCBB27 /* Utils.swift */; };
+		954DF7662A66E409001E3384 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954DF7652A66E409001E3384 /* Resources.swift */; };
 		OBJ_21 /* EMMAInAppPluginPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* EMMAInAppPluginPrism.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		11CA870025E6965C0027155A /* PrismSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrismSide.swift; sourceTree = "<group>"; };
 		11F0A15A25E3D276004E55DA /* PrismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrismViewController.swift; sourceTree = "<group>"; };
 		3AFE8EA825EBEDDA00BCBB27 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		954DF7652A66E409001E3384 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		"EMMAInAppPlugin-Prism::EMMAInAppPlugin-Prism::Product" /* EMMAInAppPlugin_Prism.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMMAInAppPlugin_Prism.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_14 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_15 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				115FE9D425E8FCA700F9975E /* WebViewController.swift */,
 				115FE9D625E9206500F9975E /* DeepLinkManager.swift */,
 				3AFE8EA825EBEDDA00BCBB27 /* Utils.swift */,
+				954DF7652A66E409001E3384 /* Resources.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -221,6 +224,7 @@
 				116DEB1325E3C6B400F98BC5 /* PrismView.swift in Sources */,
 				11CA870225E6965C0027155A /* PrismSide.swift in Sources */,
 				115FE9D525E8FCA700F9975E /* WebViewController.swift in Sources */,
+				954DF7662A66E409001E3384 /* Resources.swift in Sources */,
 				OBJ_21 /* EMMAInAppPluginPrism.swift in Sources */,
 				3AFE8EA925EBEDDA00BCBB27 /* Utils.swift in Sources */,
 			);

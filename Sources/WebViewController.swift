@@ -71,7 +71,7 @@ class EMMAWebViewController: UIViewController, WKNavigationDelegate {
 
     func addCloseButton() {
         let img = UIImage(named: "webview_close_btn",
-                                  in: Bundle.init(for: self.classForCoder), compatibleWith: nil)
+                                  in: resourcesBundle, compatibleWith: nil)
         let closeButton = UIButton(type: .custom)
         closeButton.setImage(img, for: .normal)
         closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)

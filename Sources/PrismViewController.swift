@@ -97,7 +97,7 @@ class PrismViewController: UIViewController, WebViewProtocol {
     
     func createControlButtonToView(name: String, action: Selector, pos: Int) -> UIButton {
         let img = UIImage(named: name,
-                                  in: Bundle.init(for: self.classForCoder), compatibleWith: nil)
+                                  in: resourcesBundle, compatibleWith: nil)
         
         let controlButton = UIButton(type: .custom)
         controlButton.addTarget(self, action:action, for: .touchUpInside)
