@@ -24,7 +24,7 @@ let package = Package(
                 "Static", "PluginPrismDemo"
             ],
             resources: [
-                .copy("Resources")
+                .process("Resources")
             ]
         ),
     ],
