@@ -95,7 +95,6 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				11C7F2A125EE61F1000C2A7A /* EMMAInAppPlugin-Prism.plist */,
-				11B1D11C25E6BC3100AB79A5 /* Resources */,
 				OBJ_7 /* Sources */,
 				OBJ_9 /* Tests */,
 				OBJ_10 /* Products */,
@@ -108,6 +107,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				11B1D11C25E6BC3100AB79A5 /* Resources */,
 				11CA86FF25E6965C0027155A /* Prism.swift */,
 				11CA870025E6965C0027155A /* PrismSide.swift */,
 				116DEB1225E3C6B400F98BC5 /* PrismView.swift */,
