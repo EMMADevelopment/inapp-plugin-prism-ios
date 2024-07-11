@@ -15,6 +15,10 @@ For integrate this plugin you can download with Swift Package Manager:
 1. Open Xcode and select File > Swift Packages > Add Package Dependency
 2. Add the repo url and select version 4.9.0+ as minimum or master branch
 
+> **Warning**
+>
+> Version 1.3 depends of EMMA SDK 4.14.0 if your project cannot update force package tag to previous version 1.2
+
 ## Integration
 
 Import the library in AppDelegate and add plugin class to SDK.
