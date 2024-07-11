@@ -108,9 +108,14 @@ class PrismViewController: UIViewController, WebViewProtocol {
         return controlButton
     }
     
+    @objc func closeButton() {
+        EMMAInAppPluginPrism.sendDismissedClick(campaign: prism!.campaign)
+        closeAction()
+    }
+    
     func addButtons(toView: UIView, atPos: Int) {
         let closeButton = createControlButtonToView(name:"prism_close_btn",
-                                                    action: #selector(closeAction), pos:atPos)
+                                                    action: #selector(closeButton), pos:atPos)
 
         let closeButtonConstraints = [
             closeButton.topAnchor.constraint(equalTo: toView.topAnchor, constant: 5.0),

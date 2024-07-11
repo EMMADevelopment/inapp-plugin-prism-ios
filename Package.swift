@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "EMMAInAppPlugin-Prism",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v11)
     ],
     products: [
         .library(
@@ -14,7 +14,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/EMMADevelopment/eMMa-iOS-SDK.git", from: "4.9.0"),
+        .package(url: "https://github.com/EMMADevelopment/eMMa-iOS-SDK.git", from: "4.14.0"),
     ],
     targets: [
         .target(

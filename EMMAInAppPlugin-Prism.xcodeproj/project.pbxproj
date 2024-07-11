@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -32,11 +32,12 @@
 		11F0A15B25E3D276004E55DA /* PrismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0A15A25E3D276004E55DA /* PrismViewController.swift */; };
 		3AFE8EA925EBEDDA00BCBB27 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE8EA825EBEDDA00BCBB27 /* Utils.swift */; };
 		954DF7662A66E409001E3384 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954DF7652A66E409001E3384 /* Resources.swift */; };
+		95854E9C2C405568005A9F1D /* EMMA_iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */; };
 		OBJ_21 /* EMMAInAppPluginPrism.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* EMMAInAppPluginPrism.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
+		1103A62825E3F958005A2045 /* EMMA_iOS.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9SQWVREY8:EMMA MOBILE SOLUTIONS SL."; lastKnownFileType = wrapper.xcframework; name = EMMA_iOS.xcframework; path = Static/EMMA_iOS.xcframework; sourceTree = "<group>"; };
 		115FE9D425E8FCA700F9975E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		115FE9D625E9206500F9975E /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
 		116DEB1225E3C6B400F98BC5 /* PrismView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrismView.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 			buildActionMask = 0;
 			files = (
 				1103A63A25E3FB8F005A2045 /* EMMA_iOS.xcframework in Frameworks */,
+				95854E9C2C405568005A9F1D /* EMMA_iOS.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
